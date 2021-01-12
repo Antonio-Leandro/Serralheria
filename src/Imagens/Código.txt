@@ -1,0 +1,13 @@
+Códigos: 
+
+
+Botão e ENTER
+
+      if(jTextFieldUsuario.getText().equals("Murilo")&&jPasswordFieldSenha.getText().equals("1234")){
+        TelaPrincipal tela = new TelaPrincipal();
+                      tela.setVisible(true);
+        dispose();
+    }                                              
+        else{
+            JOptionPane.showMessageDialog(rootPane, "Acesso Negado!");
+        }
