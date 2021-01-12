@@ -33,6 +33,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu2.setText("Cadastros");
 
         MenuItemCadastroDeClientes.setText("Cadastro de Clientes");
+        MenuItemCadastroDeClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuItemCadastroDeClientesActionPerformed(evt);
+            }
+        });
         jMenu2.add(MenuItemCadastroDeClientes);
 
         MenuItemCadastroDeFornecedores.setText("Cadastro de Fornecedores");
@@ -65,6 +70,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(814, 589));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void MenuItemCadastroDeClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeClientesActionPerformed
+        CadastroClientes cadastroclientes = new CadastroClientes();
+        cadastroclientes.setVisible(true);
+    }//GEN-LAST:event_MenuItemCadastroDeClientesActionPerformed
 
  
     public static void main(String args[]) {
