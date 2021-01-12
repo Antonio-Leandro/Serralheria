@@ -4,6 +4,7 @@ public class CadastroClientes extends javax.swing.JFrame {
 
         public CadastroClientes() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
