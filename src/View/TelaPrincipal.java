@@ -41,6 +41,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu2.add(MenuItemCadastroDeClientes);
 
         MenuItemCadastroDeFornecedores.setText("Cadastro de Fornecedores");
+        MenuItemCadastroDeFornecedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuItemCadastroDeFornecedoresActionPerformed(evt);
+            }
+        });
         jMenu2.add(MenuItemCadastroDeFornecedores);
 
         MenuItemCadastroDeProdutos.setText("Cadastro de Produtos");
@@ -75,6 +80,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         CadastroClientes cadastroclientes = new CadastroClientes();
         cadastroclientes.setVisible(true);
     }//GEN-LAST:event_MenuItemCadastroDeClientesActionPerformed
+
+    private void MenuItemCadastroDeFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeFornecedoresActionPerformed
+        CadastroFornecedores cadastrofornecedores = new CadastroFornecedores();
+        cadastrofornecedores.setVisible(true);
+    }//GEN-LAST:event_MenuItemCadastroDeFornecedoresActionPerformed
 
  
     public static void main(String args[]) {
