@@ -89,21 +89,25 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void MenuItemCadastroDeClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeClientesActionPerformed
         CadastroClientes cadastroclientes = new CadastroClientes();
         cadastroclientes.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_MenuItemCadastroDeClientesActionPerformed
 
     private void MenuItemCadastroDeFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeFornecedoresActionPerformed
         CadastroFornecedores cadastrofornecedores = new CadastroFornecedores();
         cadastrofornecedores.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_MenuItemCadastroDeFornecedoresActionPerformed
 
     private void MenuItemCadastroDeProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeProdutosActionPerformed
         CadastroProdutos cadastroprodutos = new CadastroProdutos();
         cadastroprodutos.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_MenuItemCadastroDeProdutosActionPerformed
 
     private void MenuItemCadastroDeFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeFuncionariosActionPerformed
         CadastroFuncionarios cadastrofuncionarios = new CadastroFuncionarios();
         cadastrofuncionarios.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_MenuItemCadastroDeFuncionariosActionPerformed
 
  
