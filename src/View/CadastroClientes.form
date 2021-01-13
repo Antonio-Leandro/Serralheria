@@ -24,13 +24,142 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="935" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jLabelNome" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldNome" min="-2" pref="239" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabelCEP" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldCEP" min="-2" pref="49" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabelRua" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldRua" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jLabelCPF" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldCPF" pref="131" max="32767" attributes="0"/>
+                  <Component id="jLabelBairro" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldBairro" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabelRG" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldRG" min="-2" pref="129" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabelCidade" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldCidade" min="-2" pref="92" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabelUF" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldUF" min="-2" pref="37" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="362" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="621" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelCPF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelRG" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jTextFieldNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldCPF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldRG" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelCEP" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelRua" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelBairro" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelCidade" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelUF" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jTextFieldCEP" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldRua" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldBairro" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldCidade" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldUF" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="506" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JTextField" name="jTextFieldNome">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelNome">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nome:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelCPF">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="CPF:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldCPF">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelRG">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="RG:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldRG">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelCEP">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="CEP:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldCEP">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelRua">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Rua:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldRua">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelBairro">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bairro:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldBairro">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelCidade">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cidade:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldCidade">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelUF">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="UF:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldUF">
+    </Component>
+  </SubComponents>
 </Form>
