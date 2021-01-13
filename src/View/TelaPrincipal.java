@@ -49,9 +49,19 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu2.add(MenuItemCadastroDeFornecedores);
 
         MenuItemCadastroDeProdutos.setText("Cadastro de Produtos");
+        MenuItemCadastroDeProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuItemCadastroDeProdutosActionPerformed(evt);
+            }
+        });
         jMenu2.add(MenuItemCadastroDeProdutos);
 
         MenuItemCadastroDeFuncionarios.setText("Cadastro de Funcionários");
+        MenuItemCadastroDeFuncionarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuItemCadastroDeFuncionariosActionPerformed(evt);
+            }
+        });
         jMenu2.add(MenuItemCadastroDeFuncionarios);
 
         jMenuBarPrincipal.add(jMenu2);
@@ -85,6 +95,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
         CadastroFornecedores cadastrofornecedores = new CadastroFornecedores();
         cadastrofornecedores.setVisible(true);
     }//GEN-LAST:event_MenuItemCadastroDeFornecedoresActionPerformed
+
+    private void MenuItemCadastroDeProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeProdutosActionPerformed
+        CadastroProdutos cadastroprodutos = new CadastroProdutos();
+        cadastroprodutos.setVisible(true);
+    }//GEN-LAST:event_MenuItemCadastroDeProdutosActionPerformed
+
+    private void MenuItemCadastroDeFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeFuncionariosActionPerformed
+        CadastroFuncionarios cadastrofuncionarios = new CadastroFuncionarios();
+        cadastrofuncionarios.setVisible(true);
+    }//GEN-LAST:event_MenuItemCadastroDeFuncionariosActionPerformed
 
  
     public static void main(String args[]) {
