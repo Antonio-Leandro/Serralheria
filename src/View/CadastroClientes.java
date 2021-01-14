@@ -224,7 +224,6 @@ public class CadastroClientes extends javax.swing.JFrame {
                                     .addComponent(jLabelEmail))))
                         .addGap(0, 48, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
                         .addComponent(jButtonSalvar)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonDeletar)
