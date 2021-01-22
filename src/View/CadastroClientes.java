@@ -119,6 +119,11 @@ public class CadastroClientes extends javax.swing.JFrame {
         jButtonEditar.setText("Editar");
 
         jButtonSalvar.setText("Salvar");
+        jButtonSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalvarActionPerformed(evt);
+            }
+        });
 
         jButtonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Sair.jpg"))); // NOI18N
 
@@ -343,6 +348,10 @@ public class CadastroClientes extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(835, 450));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalvarActionPerformed
+        
+    }//GEN-LAST:event_jButtonSalvarActionPerformed
 
 
     public static void main(String args[]) {

@@ -1,13 +1,14 @@
 package Modelo;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class Clientes { 
 private String CPF;
 private String NOME;
 private String RG;
-private Date DATA_DE_NASCIMENTO;
-private Date DATA_DE_CADASTRO;
+private String DATA_DE_NASCIMENTO;
+private String DATA_DE_CADASTRO;
 private String NACIONALIDADE;
 private String NATURALIDADE;
 private String ESTADO_CIVIL;
@@ -24,6 +25,7 @@ private String EMAIL;
 private String EMPRESA;
 private String CARGO;
 private String END_COMERCIAL;
+private String NUM_COMERCIAL;
 private String CEP_COMERCIAL;
 private String BAIRRO_COMERCIAL;
 private String CIDADE_COMERCIAL;
@@ -53,19 +55,19 @@ private String ESTADO_COMERCIAL;
         this.RG = RG;
     }
 
-    public Date getDATA_DE_NASCIMENTO() {
+    public String getDATA_DE_NASCIMENTO() {
         return DATA_DE_NASCIMENTO;
     }
 
-    public void setDATA_DE_NASCIMENTO(Date DATA_DE_NASCIMENTO) {
+    public void setDATA_DE_NASCIMENTO(String DATA_DE_NASCIMENTO) {
         this.DATA_DE_NASCIMENTO = DATA_DE_NASCIMENTO;
     }
 
-    public Date getDATA_DE_CADASTRO() {
+    public String getDATA_DE_CADASTRO() {
         return DATA_DE_CADASTRO;
     }
 
-    public void setDATA_DE_CADASTRO(Date DATA_DE_CADASTRO) {
+    public void setDATA_DE_CADASTRO(String DATA_DE_CADASTRO) {
         this.DATA_DE_CADASTRO = DATA_DE_CADASTRO;
     }
 
@@ -201,6 +203,14 @@ private String ESTADO_COMERCIAL;
         return CEP_COMERCIAL;
     }
 
+    public String getNUM_COMERCIAL() {
+        return NUM_COMERCIAL;
+    }
+
+    public void setNUM_COMERCIAL(String NUM_COMERCIAL) {
+        this.NUM_COMERCIAL = NUM_COMERCIAL;
+    }
+    
     public void setCEP_COMERCIAL(String CEP_COMERCIAL) {
         this.CEP_COMERCIAL = CEP_COMERCIAL;
     }
@@ -228,4 +238,8 @@ private String ESTADO_COMERCIAL;
     public void setESTADO_COMERCIAL(String ESTADO_COMERCIAL) {
         this.ESTADO_COMERCIAL = ESTADO_COMERCIAL;
     }  
+
+    public void setDATA_DE_NASCIMENTO(Calendar data) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
