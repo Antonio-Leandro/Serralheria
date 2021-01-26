@@ -8,10 +8,10 @@ import java.util.Calendar;
 public class Testes {
     
     public static void main(String[] args) {
-        /*ConnectionFactory connection = new ConnectionFactory();
+        ConnectionFactory connection = new ConnectionFactory();
         connection.getConnection();
-        System.out.println("Conectando com sucesso...");*/
-        Clientes clientes = new Clientes();
+        System.out.println("Conectando com sucesso...");
+        /*Clientes clientes = new Clientes();
             clientes.setCPF("164.881.778-50");
             clientes.setNOME("Antonio Leandro Saldanha");
             clientes.setRG("24.259.699-X");
@@ -39,6 +39,6 @@ public class Testes {
             clientes.setESTADO_COMERCIAL("SP");
             
         PessoaDao pessoa = new PessoaDao();
-        pessoa.adiciona(clientes);
+        pessoa.adiciona(clientes);*/
     }  
 }
