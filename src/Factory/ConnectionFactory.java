@@ -8,10 +8,10 @@ public class ConnectionFactory {
     
     public Connection getConnection() {
         try {
-             return DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306", "root", "Antonio");
-             
+            Class.forName("com.mysql.jdbc.Driver");
+            return DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306//NETBEANS", "root", "Antonio");     
         } catch (Exception e) {
-            System.out.println("Erro de conexão com o banco de dados...");
+            System.out.println("Erro de conexão com o banco de dados..." + e.getMessage());
         }   
         return null;
     }

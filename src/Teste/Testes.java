@@ -10,7 +10,7 @@ public class Testes {
     public static void main(String[] args) {
         ConnectionFactory connection = new ConnectionFactory();
         connection.getConnection();
-        System.out.println("Conectando com sucesso...");
+        //System.out.println("Conectando com sucesso...");
         /*Clientes clientes = new Clientes();
             clientes.setCPF("164.881.778-50");
             clientes.setNOME("Antonio Leandro Saldanha");
