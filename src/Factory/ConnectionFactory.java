@@ -8,7 +8,6 @@ public class ConnectionFactory {
     
     public Connection getConnection() {
         try {
-            //Class.forName("com.mysql.jdbc.Driver").newInstance();
             return DriverManager.getConnection("jdbc:mysql://localhost:3306/serralheria?serverTimezone=UTC", "root", "antonio");     
         } catch (Exception e) {
         	e.printStackTrace();
