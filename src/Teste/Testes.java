@@ -11,14 +11,15 @@ public class Testes {
     public static void main(String[] args) throws SQLException {
         ConnectionFactory connection = new ConnectionFactory();
         if (connection != null) {
-        System.out.println("Conectando com sucesso...");
+        System.out.println("Conectado com sucesso...");
         Clientes clientes = new Clientes();
-            clientes.setCPF("164.881.778-50");
+            clientes.setCPF("16488177850");
             clientes.setNOME("Antonio Leandro Saldanha");
             clientes.setRG("24.259.699-X");
             clientes.setDATA_DE_NASCIMENTO("20/01/2021");
             clientes.setDATA_DE_CADASTRO("20/01/2021");
             clientes.setNACIONALIDADE("Brasileiro");
+            clientes.setNATURALIDADE("Ceara");
             clientes.setESTADO_CIVIL("Casado");
             clientes.setCEP("04883-110");
             clientes.setLOGRADOURO("Rua Saverio De Donato");

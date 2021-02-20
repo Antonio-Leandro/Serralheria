@@ -12,7 +12,6 @@ public class PessoaDao {
     
     public void adiciona (Clientes clientes) throws SQLException {
         Connection c =  connection.getConnection();
-        //Statement stmt = null;
         
         String sql = "INSERT INTO tbl_clientes ("
                      + "CPF,"
@@ -44,7 +43,7 @@ public class PessoaDao {
                      + "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         
         PreparedStatement stmt = c.prepareStatement(sql);
-        stmt.setString(1, clientes.getCPF());
+        stmt.setLong(1, clientes.getCPF());
         stmt.setString(2, clientes.getNOME());
         stmt.setString(3, clientes.getRG());
         stmt.setString(4, clientes.getDATA_DE_NASCIMENTO());
@@ -72,5 +71,7 @@ public class PessoaDao {
         stmt.setString(26, clientes.getESTADO_COMERCIAL());
         
         stmt.execute();
+        stmt.close();
+        c.close();
     } 
 }
