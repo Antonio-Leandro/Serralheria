@@ -8,8 +8,8 @@ import java.sql.SQLException;
 public class Testes {
     
     public static void main(String[] args) throws SQLException {
-        ConnectionFactory connection = new ConnectionFactory();
-        if (connection != null) {
+        //ConnectionFactory connection = new ConnectionFactory();
+                
         System.out.println("Conectado com sucesso...");
         Clientes clientes = new Clientes();
             clientes.setCPF("164.881.778-50");
@@ -40,9 +40,6 @@ public class Testes {
             clientes.setESTADO_COMERCIAL("SP");
             
             PessoaDao pessoa = new PessoaDao();
-            pessoa.adiciona(clientes);
-        } else {
-            
-        }  
+            pessoa.adiciona(clientes); 
     }  
 }
