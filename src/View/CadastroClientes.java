@@ -429,8 +429,10 @@ public class CadastroClientes extends javax.swing.JFrame {
             PessoaDao pessoa = new PessoaDao();
             try {
                 pessoa.adiciona(clientes);
+                System.out.println("Cadastro salvo com sucesso! ");
             } catch (SQLException ex) {
-                Logger.getLogger(CadastroClientes.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("Não foi possível salvar o cadastro..." + ex.getMessage());
+                ex.printStackTrace();
             }
     }//GEN-LAST:event_jButtonSalvarActionPerformed
 
