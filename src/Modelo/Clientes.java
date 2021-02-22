@@ -1,7 +1,5 @@
 package Modelo;
 
-import java.util.Calendar;
-
 public class Clientes { 
 private String CPF;
 private String NOME;
