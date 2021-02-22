@@ -4,7 +4,6 @@ import Dao.PessoaDao;
 import Factory.ConnectionFactory;
 import Modelo.Clientes;
 import java.sql.SQLException;
-import java.util.Calendar;
 
 public class Testes {
     
@@ -13,7 +12,7 @@ public class Testes {
         if (connection != null) {
         System.out.println("Conectado com sucesso...");
         Clientes clientes = new Clientes();
-            clientes.setCPF("16488177850");
+            clientes.setCPF("164.881.778-50");
             clientes.setNOME("Antonio Leandro Saldanha");
             clientes.setRG("24.259.699-X");
             clientes.setDATA_DE_NASCIMENTO("20/01/2021");

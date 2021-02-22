@@ -43,7 +43,7 @@ public class PessoaDao {
                      + "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         
         PreparedStatement stmt = c.prepareStatement(sql);
-        stmt.setLong(1, clientes.getCPF());
+        stmt.setString(1, clientes.getCPF());
         stmt.setString(2, clientes.getNOME());
         stmt.setString(3, clientes.getRG());
         stmt.setString(4, clientes.getDATA_DE_NASCIMENTO());

@@ -3,7 +3,7 @@ package Modelo;
 import java.util.Calendar;
 
 public class Clientes { 
-private Long CPF;
+private String CPF;
 private String NOME;
 private String RG;
 private String DATA_DE_NASCIMENTO;
@@ -30,11 +30,11 @@ private String BAIRRO_COMERCIAL;
 private String CIDADE_COMERCIAL;
 private String ESTADO_COMERCIAL;
 
-    public Long getCPF() {
+    public String getCPF() {
         return CPF;
     }
 
-    public void setCPF(Long CPF) {
+    public void setCPF(String CPF) {
         this.CPF = CPF;
     }
 
@@ -237,12 +237,4 @@ private String ESTADO_COMERCIAL;
     public void setESTADO_COMERCIAL(String ESTADO_COMERCIAL) {
         this.ESTADO_COMERCIAL = ESTADO_COMERCIAL;
     }  
-
-    public void setDATA_DE_NASCIMENTO(Calendar data) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setCPF(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
