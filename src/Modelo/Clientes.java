@@ -236,5 +236,6 @@ private String ESTADO_COMERCIAL;
 
     public void setESTADO_COMERCIAL(String ESTADO_COMERCIAL) {
         this.ESTADO_COMERCIAL = ESTADO_COMERCIAL;
-    }  
+    }
+    
 }
