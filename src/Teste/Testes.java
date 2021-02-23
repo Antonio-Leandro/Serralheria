@@ -1,7 +1,6 @@
 package Teste;
 
 import Dao.PessoaDao;
-import Factory.ConnectionFactory;
 import Modelo.Clientes;
 import java.sql.SQLException;
 

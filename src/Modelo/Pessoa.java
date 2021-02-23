@@ -1,6 +1,6 @@
 package Modelo;
 
-public class Clientes { 
+public class Pessoa {
 private String CPF;
 private String NOME;
 private String RG;
@@ -196,10 +196,6 @@ private String ESTADO_COMERCIAL;
         this.END_COMERCIAL = END_COMERCIAL;
     }
 
-    public String getCEP_COMERCIAL() {
-        return CEP_COMERCIAL;
-    }
-
     public String getNUM_COMERCIAL() {
         return NUM_COMERCIAL;
     }
@@ -207,7 +203,11 @@ private String ESTADO_COMERCIAL;
     public void setNUM_COMERCIAL(String NUM_COMERCIAL) {
         this.NUM_COMERCIAL = NUM_COMERCIAL;
     }
-    
+
+    public String getCEP_COMERCIAL() {
+        return CEP_COMERCIAL;
+    }
+
     public void setCEP_COMERCIAL(String CEP_COMERCIAL) {
         this.CEP_COMERCIAL = CEP_COMERCIAL;
     }
@@ -234,5 +234,7 @@ private String ESTADO_COMERCIAL;
 
     public void setESTADO_COMERCIAL(String ESTADO_COMERCIAL) {
         this.ESTADO_COMERCIAL = ESTADO_COMERCIAL;
-    }  
+    }
+
+    
 }

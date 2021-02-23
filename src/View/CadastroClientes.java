@@ -3,8 +3,6 @@ package View;
 import Dao.PessoaDao;
 import Modelo.Clientes;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class CadastroClientes extends javax.swing.JFrame {
 
