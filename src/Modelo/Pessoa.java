@@ -30,7 +30,6 @@ private String ESTADO_COMERCIAL;
 
     public String getCPF() {
         return CPF;
-    
     }
 
     public void setCPF(String CPF) {
