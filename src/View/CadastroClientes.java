@@ -1,7 +1,7 @@
 package View;
 
 import Dao.PessoaDao;
-import Modelo.Clientes;
+import Modelo.Pessoa;
 import java.sql.SQLException;
 
 public class CadastroClientes extends javax.swing.JFrame {
@@ -395,38 +395,38 @@ public class CadastroClientes extends javax.swing.JFrame {
 
     private void jButtonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalvarActionPerformed
         
-        Clientes clientes = new Clientes();
+        Pessoa pessoa = new Pessoa();
         
-            clientes.setCPF(jTextFieldCPF.getText().toString());
-            clientes.setNOME(jTextFieldNome.getText().toString());
-            clientes.setRG(jTextFieldRG.getText().toString());
-            clientes.setDATA_DE_NASCIMENTO(jTextFieldDataNasc.getText().toString());
-            clientes.setDATA_DE_CADASTRO(jTextFieldDataCadastro.getText().toString());
-            clientes.setNACIONALIDADE(jTextFieldNacionalidade.getText().toString());
-            clientes.setNATURALIDADE(jTextFieldNaturalidade.getText().toString().toString());
-            clientes.setESTADO_CIVIL(jComboBoxEstadoCivil.getSelectedItem().toString());
-            clientes.setCEP(jTextFieldCEP.getText().toString());
-            clientes.setLOGRADOURO(jTextFieldRua.getText().toString());
-            clientes.setNUMERO(jTextFieldNumero.getText().toString());
-            clientes.setCOMPLEMENTO(jTextFieldComplemento.getText().toString());
-            clientes.setBAIRRO(jTextFieldBairro.getText().toString());
-            clientes.setCIDADE(jTextFieldCidade.getText().toString());
-            clientes.setESTADO(jComboBoxUF.getSelectedItem().toString());
-            clientes.setTELEFONE_FIXO(jTextFieldTelFixo.getText().toString());
-            clientes.setCELULAR(jTextFieldCelular.getText().toString());
-            clientes.setEMAIL(jTextFieldEmail.getText().toString());
-            clientes.setEMPRESA(jTextFieldEmpresa.getText().toString());
-            clientes.setCARGO(jTextFieldCargo.getText().toString());
-            clientes.setEND_COMERCIAL(jTextFieldEnderecoComercial.getText().toString());
-            clientes.setNUM_COMERCIAL(jTextFieldNumeroComercial.getText().toString());
-            clientes.setCEP_COMERCIAL(jTextFieldCepComercial.getText().toString());
-            clientes.setBAIRRO_COMERCIAL(jTextFieldBairroComercial.getText().toString());
-            clientes.setCIDADE_COMERCIAL(jTextFieldCidadeComercial.getText().toString());
-            clientes.setESTADO_COMERCIAL(jComboBoxUFComercial.getSelectedItem().toString());
+            pessoa.setCPF(jTextFieldCPF.getText().toString());
+            pessoa.setNOME(jTextFieldNome.getText().toString());
+            pessoa.setRG(jTextFieldRG.getText().toString());
+            pessoa.setDATA_DE_NASCIMENTO(jTextFieldDataNasc.getText().toString());
+            pessoa.setDATA_DE_CADASTRO(jTextFieldDataCadastro.getText().toString());
+            pessoa.setNACIONALIDADE(jTextFieldNacionalidade.getText().toString());
+            pessoa.setNATURALIDADE(jTextFieldNaturalidade.getText().toString().toString());
+            pessoa.setESTADO_CIVIL(jComboBoxEstadoCivil.getSelectedItem().toString());
+            pessoa.setCEP(jTextFieldCEP.getText().toString());
+            pessoa.setLOGRADOURO(jTextFieldRua.getText().toString());
+            pessoa.setNUMERO(jTextFieldNumero.getText().toString());
+            pessoa.setCOMPLEMENTO(jTextFieldComplemento.getText().toString());
+            pessoa.setBAIRRO(jTextFieldBairro.getText().toString());
+            pessoa.setCIDADE(jTextFieldCidade.getText().toString());
+            pessoa.setESTADO(jComboBoxUF.getSelectedItem().toString());
+            pessoa.setTELEFONE_FIXO(jTextFieldTelFixo.getText().toString());
+            pessoa.setCELULAR(jTextFieldCelular.getText().toString());
+            pessoa.setEMAIL(jTextFieldEmail.getText().toString());
+            pessoa.setEMPRESA(jTextFieldEmpresa.getText().toString());
+            pessoa.setCARGO(jTextFieldCargo.getText().toString());
+            pessoa.setEND_COMERCIAL(jTextFieldEnderecoComercial.getText().toString());
+            pessoa.setNUM_COMERCIAL(jTextFieldNumeroComercial.getText().toString());
+            pessoa.setCEP_COMERCIAL(jTextFieldCepComercial.getText().toString());
+            pessoa.setBAIRRO_COMERCIAL(jTextFieldBairroComercial.getText().toString());
+            pessoa.setCIDADE_COMERCIAL(jTextFieldCidadeComercial.getText().toString());
+            pessoa.setESTADO_COMERCIAL(jComboBoxUFComercial.getSelectedItem().toString());
             
-            PessoaDao pessoa = new PessoaDao();
+            PessoaDao pessoadao = new PessoaDao();
             try {
-                pessoa.adiciona(clientes);
+                pessoadao.adiciona(pessoa);
                 System.out.println("Cadastro salvo com sucesso! ");
             } catch (SQLException ex) {
                 System.out.println("Não foi possível salvar o cadastro..." + ex.getMessage());
