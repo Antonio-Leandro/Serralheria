@@ -49,8 +49,7 @@ private String ESTADO_COMERCIAL;
     }
 
     public void setRG(String RG) {
-        this.RG = RG;
-        
+        this.RG = RG;  
     }
 
     public String getDATA_DE_NASCIMENTO() {
