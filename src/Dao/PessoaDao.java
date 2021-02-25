@@ -9,10 +9,13 @@ import java.sql.SQLException;
 
 public class PessoaDao {
     ConnectionFactory connection = new ConnectionFactory();
-    
+    public void busca (Pessoa pessoa) {
+        Connection c = connection.getConnection();
+        String sql = "Select * from tbl_pessoa where CPF = ?";
+    }
     public void adiciona (Pessoa pessoa) throws SQLException {
         Connection c =  connection.getConnection();
-        System.out.println("Conectando no banco de dados...");
+        
         String sql = "INSERT INTO tbl_clientes ("
                      + "CPF,"
                      + "NOME,"
