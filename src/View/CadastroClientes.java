@@ -68,9 +68,11 @@ public class CadastroClientes extends javax.swing.JFrame {
         jLabelDataCadastro = new javax.swing.JLabel();
         jTextFieldDataCadastro = new javax.swing.JTextField();
         jLabelEstadoCivil = new javax.swing.JLabel();
-        jComboBoxEstadoCivil = new javax.swing.JComboBox<>();
+        jComboBoxTipoPessoa = new javax.swing.JComboBox<>();
         jLabelNumeroComercial = new javax.swing.JLabel();
         jTextFieldNumeroComercial = new javax.swing.JTextField();
+        jLabelTipoPessoa = new javax.swing.JLabel();
+        jComboBoxEstadoCivil1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Clientes");
@@ -143,9 +145,13 @@ public class CadastroClientes extends javax.swing.JFrame {
 
         jLabelEstadoCivil.setText("Estado Civil:");
 
-        jComboBoxEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Casado(a)", "Solteiro(a)", "União Estável" }));
+        jComboBoxTipoPessoa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "C", "F", "P" }));
 
         jLabelNumeroComercial.setText("Numero:");
+
+        jLabelTipoPessoa.setText("Tipo pessoal:");
+
+        jComboBoxEstadoCivil1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Casado(a)", "Solteiro(a)", "União Estável" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -238,19 +244,24 @@ public class CadastroClientes extends javax.swing.JFrame {
                                             .addComponent(jLabelNacionalidade)
                                             .addComponent(jTextFieldNacionalidade, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabelNaturalidade)
                                                 .addGap(60, 60, 60)
                                                 .addComponent(jLabelDataCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(27, 27, 27)
-                                                .addComponent(jLabelEstadoCivil))
+                                                .addComponent(jLabelEstadoCivil)
+                                                .addGap(33, 33, 33))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jTextFieldNaturalidade, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
                                                 .addComponent(jTextFieldDataCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jComboBoxEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jComboBoxEstadoCivil1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jComboBoxTipoPessoa, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabelTipoPessoa)))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabelNome)
@@ -315,14 +326,16 @@ public class CadastroClientes extends javax.swing.JFrame {
                             .addComponent(jTextFieldNacionalidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelDataCadastro)
-                            .addComponent(jLabelEstadoCivil)))
+                            .addComponent(jLabelEstadoCivil)
+                            .addComponent(jLabelTipoPessoa)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabelNaturalidade)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTextFieldNaturalidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextFieldDataCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBoxEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jComboBoxTipoPessoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxEstadoCivil1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelCEP)
@@ -404,7 +417,7 @@ public class CadastroClientes extends javax.swing.JFrame {
             pessoa.setDATA_DE_CADASTRO(jTextFieldDataCadastro.getText().toString());
             pessoa.setNACIONALIDADE(jTextFieldNacionalidade.getText().toString());
             pessoa.setNATURALIDADE(jTextFieldNaturalidade.getText().toString().toString());
-            pessoa.setESTADO_CIVIL(jComboBoxEstadoCivil.getSelectedItem().toString());
+            pessoa.setESTADO_CIVIL(jComboBoxTipoPessoa.getSelectedItem().toString());
             pessoa.setCEP(jTextFieldCEP.getText().toString());
             pessoa.setLOGRADOURO(jTextFieldRua.getText().toString());
             pessoa.setNUMERO(jTextFieldNumero.getText().toString());
@@ -423,6 +436,7 @@ public class CadastroClientes extends javax.swing.JFrame {
             pessoa.setBAIRRO_END_COM(jTextFieldBairroComercial.getText().toString());
             pessoa.setCIDADE_END_COM(jTextFieldCidadeComercial.getText().toString());
             pessoa.setESTADO_END_COM(jComboBoxUFComercial.getSelectedItem().toString());
+            pessoa.setTIPO_PESSOA(jComboBoxTipoPessoa.getSelectedItem().toString());
             
             PessoaDao pessoadao = new PessoaDao();
             try {
@@ -449,7 +463,8 @@ public class CadastroClientes extends javax.swing.JFrame {
     private javax.swing.JButton jButtonEditar;
     private javax.swing.JButton jButtonSair;
     private javax.swing.JButton jButtonSalvar;
-    private javax.swing.JComboBox<String> jComboBoxEstadoCivil;
+    private javax.swing.JComboBox<String> jComboBoxEstadoCivil1;
+    private javax.swing.JComboBox<String> jComboBoxTipoPessoa;
     private javax.swing.JComboBox<String> jComboBoxUF;
     private javax.swing.JComboBox<String> jComboBoxUFComercial;
     private javax.swing.JLabel jLabelBairro;
@@ -476,6 +491,7 @@ public class CadastroClientes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelRG;
     private javax.swing.JLabel jLabelRua;
     private javax.swing.JLabel jLabelTelFixo;
+    private javax.swing.JLabel jLabelTipoPessoa;
     private javax.swing.JLabel jLabelUF;
     private javax.swing.JLabel jLabelUFComercial;
     private javax.swing.JTextField jTextFieldBairro;

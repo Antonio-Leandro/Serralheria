@@ -143,21 +143,27 @@
                                           <Component id="jTextFieldNacionalidade" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabelNaturalidade" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                                               <Component id="jLabelDataCadastro" min="-2" pref="95" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                               <Component id="jLabelEstadoCivil" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jTextFieldNaturalidade" min="-2" pref="103" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="jTextFieldDataCadastro" min="-2" pref="107" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="jComboBoxEstadoCivil1" min="-2" pref="74" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jComboBoxEstadoCivil" min="-2" pref="74" max="-2" attributes="0"/>
                                           </Group>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jComboBoxTipoPessoa" min="-2" pref="74" max="-2" attributes="0"/>
+                                          <Component id="jLabelTipoPessoa" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -247,6 +253,7 @@
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                           <Component id="jLabelDataCadastro" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelEstadoCivil" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelTipoPessoa" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
@@ -255,7 +262,8 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jTextFieldNaturalidade" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldDataCadastro" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBoxEstadoCivil" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBoxTipoPessoa" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBoxEstadoCivil1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -613,14 +621,14 @@
         <Property name="text" type="java.lang.String" value="Estado Civil:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBoxEstadoCivil">
+    <Component class="javax.swing.JComboBox" name="jComboBoxTipoPessoa">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
             <StringItem index="0" value=" "/>
-            <StringItem index="1" value="Casado(a)"/>
-            <StringItem index="2" value="Solteiro(a)"/>
-            <StringItem index="3" value="Uni&#xe3;o Est&#xe1;vel"/>
+            <StringItem index="1" value="C"/>
+            <StringItem index="2" value="F"/>
+            <StringItem index="3" value="P"/>
           </StringArray>
         </Property>
       </Properties>
@@ -634,6 +642,26 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextFieldNumeroComercial">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelTipoPessoa">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tipo pessoal:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jComboBoxEstadoCivil1">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value=" "/>
+            <StringItem index="1" value="Casado(a)"/>
+            <StringItem index="2" value="Solteiro(a)"/>
+            <StringItem index="3" value="Uni&#xe3;o Est&#xe1;vel"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>
