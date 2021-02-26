@@ -4,15 +4,26 @@ import Factory.ConnectionFactory;
 import Modelo.Pessoa;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
 public class PessoaDao {
     ConnectionFactory connection = new ConnectionFactory();
-    public void busca (Pessoa pessoa) {
+    
+    public void busca (Pessoa pessoa) throws SQLException {
         Connection c = connection.getConnection();
-        String sql = "Select * from tbl_pessoa where CPF = ?";
+        
+        String sql = "Select CPF from tbl_pessoa where CPF = ?";
+        PreparedStatement stmt = c.prepareStatement(sql);
+        ResultSet rs = stmt.executeQuery();
+        
+        //if (rs.next() !=null) {
+            
+        //}
     }
+    
+     
     public void adiciona (Pessoa pessoa) throws SQLException {
         Connection c =  connection.getConnection();
         
