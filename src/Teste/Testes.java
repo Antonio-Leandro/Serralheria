@@ -31,11 +31,12 @@ public class Testes {
             pessoa.setEMPRESA("ALS TECNOLOGIA");
             pessoa.setCARGO("Gerente");
             pessoa.setEND_COMERCIAL("Rua Das Barcaças");
-            pessoa.setNUM_COMERCIAL("703");
-            pessoa.setCEP_COMERCIAL("04885-110");
-            pessoa.setBAIRRO_COMERCIAL("Brooklin");
-            pessoa.setCIDADE_COMERCIAL("São Paulo");
-            pessoa.setESTADO_COMERCIAL("SP");
+            pessoa.setNUM_END_COM("703");
+            pessoa.setCEP_END_COM("04885-110");
+            pessoa.setBAIRRO_END_COM("Brooklin");
+            pessoa.setCIDADE_END_COM("São Paulo");
+            pessoa.setESTADO_END_COM("SP");
+            pessoa.setTIPO_PESSOA("C");
             
             PessoaDao pessoadao = new PessoaDao();
             try {

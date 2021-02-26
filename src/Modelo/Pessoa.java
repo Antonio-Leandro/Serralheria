@@ -22,11 +22,12 @@ private String EMAIL;
 private String EMPRESA;
 private String CARGO;
 private String END_COMERCIAL;
-private String NUM_COMERCIAL;
-private String CEP_COMERCIAL;
-private String BAIRRO_COMERCIAL;
-private String CIDADE_COMERCIAL;
-private String ESTADO_COMERCIAL;
+private String NUM_END_COM;
+private String CEP_END_COM;
+private String BAIRRO_END_COM;
+private String CIDADE_END_COM;
+private String ESTADO_END_COM;
+private String TIPO_PESSOA;
 
     public String getCPF() {
         return CPF;
@@ -49,7 +50,7 @@ private String ESTADO_COMERCIAL;
     }
 
     public void setRG(String RG) {
-        this.RG = RG;  
+        this.RG = RG;
     }
 
     public String getDATA_DE_NASCIMENTO() {
@@ -196,45 +197,51 @@ private String ESTADO_COMERCIAL;
         this.END_COMERCIAL = END_COMERCIAL;
     }
 
-    public String getNUM_COMERCIAL() {
-        return NUM_COMERCIAL;
+    public String getNUM_END_COM() {
+        return NUM_END_COM;
     }
 
-    public void setNUM_COMERCIAL(String NUM_COMERCIAL) {
-        this.NUM_COMERCIAL = NUM_COMERCIAL;
+    public void setNUM_END_COM(String NUM_END_COM) {
+        this.NUM_END_COM = NUM_END_COM;
     }
 
-    public String getCEP_COMERCIAL() {
-        return CEP_COMERCIAL;
+    public String getCEP_END_COM() {
+        return CEP_END_COM;
     }
 
-    public void setCEP_COMERCIAL(String CEP_COMERCIAL) {
-        this.CEP_COMERCIAL = CEP_COMERCIAL;
+    public void setCEP_END_COM(String CEP_END_COM) {
+        this.CEP_END_COM = CEP_END_COM;
     }
 
-    public String getBAIRRO_COMERCIAL() {
-        return BAIRRO_COMERCIAL;
+    public String getBAIRRO_END_COM() {
+        return BAIRRO_END_COM;
     }
 
-    public void setBAIRRO_COMERCIAL(String BAIRRO_COMERCIAL) {
-        this.BAIRRO_COMERCIAL = BAIRRO_COMERCIAL;
+    public void setBAIRRO_END_COM(String BAIRRO_END_COM) {
+        this.BAIRRO_END_COM = BAIRRO_END_COM;
     }
 
-    public String getCIDADE_COMERCIAL() {
-        return CIDADE_COMERCIAL;
+    public String getCIDADE_END_COM() {
+        return CIDADE_END_COM;
     }
 
-    public void setCIDADE_COMERCIAL(String CIDADE_COMERCIAL) {
-        this.CIDADE_COMERCIAL = CIDADE_COMERCIAL;
+    public void setCIDADE_END_COM(String CIDADE_END_COM) {
+        this.CIDADE_END_COM = CIDADE_END_COM;
     }
 
-    public String getESTADO_COMERCIAL() {
-        return ESTADO_COMERCIAL;
+    public String getESTADO_END_COM() {
+        return ESTADO_END_COM;
     }
 
-    public void setESTADO_COMERCIAL(String ESTADO_COMERCIAL) {
-        this.ESTADO_COMERCIAL = ESTADO_COMERCIAL;
+    public void setESTADO_END_COM(String ESTADO_END_COM) {
+        this.ESTADO_END_COM = ESTADO_END_COM;
     }
 
-    
+    public String getTIPO_PESSOA() {
+        return TIPO_PESSOA;
+    }
+
+    public void setTIPO_PESSOA(String TIPO_PESSOA) {
+        this.TIPO_PESSOA = TIPO_PESSOA;
+    }
 }

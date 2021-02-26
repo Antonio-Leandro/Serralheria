@@ -418,11 +418,11 @@ public class CadastroClientes extends javax.swing.JFrame {
             pessoa.setEMPRESA(jTextFieldEmpresa.getText().toString());
             pessoa.setCARGO(jTextFieldCargo.getText().toString());
             pessoa.setEND_COMERCIAL(jTextFieldEnderecoComercial.getText().toString());
-            pessoa.setNUM_COMERCIAL(jTextFieldNumeroComercial.getText().toString());
-            pessoa.setCEP_COMERCIAL(jTextFieldCepComercial.getText().toString());
-            pessoa.setBAIRRO_COMERCIAL(jTextFieldBairroComercial.getText().toString());
-            pessoa.setCIDADE_COMERCIAL(jTextFieldCidadeComercial.getText().toString());
-            pessoa.setESTADO_COMERCIAL(jComboBoxUFComercial.getSelectedItem().toString());
+            pessoa.setNUM_END_COM(jTextFieldNumeroComercial.getText().toString());
+            pessoa.setCEP_END_COM(jTextFieldCepComercial.getText().toString());
+            pessoa.setBAIRRO_END_COM(jTextFieldBairroComercial.getText().toString());
+            pessoa.setCIDADE_END_COM(jTextFieldCidadeComercial.getText().toString());
+            pessoa.setESTADO_END_COM(jComboBoxUFComercial.getSelectedItem().toString());
             
             PessoaDao pessoadao = new PessoaDao();
             try {
