@@ -10,38 +10,40 @@ public class Testes {
                     
         
         Pessoa pessoa = new Pessoa();
-            pessoa.setCPF("164.881.778-57");
-            pessoa.setNOME("Antonio Saldanha");
-            pessoa.setRG("24.259.699-X");
-            pessoa.setDATA_DE_NASCIMENTO("19/05/1976");
-            pessoa.setDATA_DE_CADASTRO("25/01/2021");
-            pessoa.setNACIONALIDADE("Brasileiro");
-            pessoa.setNATURALIDADE("Ceará");
-            pessoa.setESTADO_CIVIL("Solteiro");
-            pessoa.setCEP("04883-112");
-            pessoa.setLOGRADOURO("Rua Miniades");
-            pessoa.setNUMERO("790");
-            pessoa.setCOMPLEMENTO(" ");
-            pessoa.setBAIRRO("Jardim Aladim");
-            pessoa.setCIDADE("São Paulo");
-            pessoa.setESTADO("SP");
-            pessoa.setTELEFONE_FIXO("(11)5921-3636");
-            pessoa.setCELULAR("(11)954.620.951");
-            pessoa.setEMAIL("aleandrosaldanha@bol.com.br");
-            pessoa.setEMPRESA("ALS TECNOLOGIA");
-            pessoa.setCARGO("Gerente");
-            pessoa.setEND_COMERCIAL("Rua Das Barcaças");
-            pessoa.setNUM_END_COM("703");
-            pessoa.setCEP_END_COM("04885-110");
-            pessoa.setBAIRRO_END_COM("Brooklin");
-            pessoa.setCIDADE_END_COM("São Paulo");
-            pessoa.setESTADO_END_COM("SP");
-            pessoa.setTIPO_PESSOA("C");
+               pessoa.setCPF("164.881.778-65");
+               pessoa.setNOME("Antonio Saldanha");
+               pessoa.setRG("24.259.699-X");
+               pessoa.setDATA_DE_NASCIMENTO("19/05/1976");
+               pessoa.setDATA_DE_CADASTRO("25/01/2021");
+               pessoa.setNACIONALIDADE("Brasileiro");
+               pessoa.setNATURALIDADE("Ceará");
+               pessoa.setESTADO_CIVIL("Solteiro");
+               pessoa.setCEP("04883-112");
+               pessoa.setLOGRADOURO("Rua Miniades");
+               pessoa.setNUMERO("790");
+               pessoa.setCOMPLEMENTO(" ");
+               pessoa.setBAIRRO("Jardim Aladim");
+               pessoa.setCIDADE("São Paulo");
+               pessoa.setESTADO("SP");
+               pessoa.setTELEFONE_FIXO("(11)5921-3636");
+               pessoa.setCELULAR("(11)954.620.951");
+               pessoa.setEMAIL("aleandrosaldanha@bol.com.br");
+               pessoa.setEMPRESA("ALS TECNOLOGIA");
+               pessoa.setCARGO("Gerente");
+               pessoa.setEND_COMERCIAL("Rua Das Barcaças");
+               pessoa.setNUM_END_COM("703");
+               pessoa.setCEP_END_COM("04885-110");
+               pessoa.setBAIRRO_END_COM("Brooklin");
+               pessoa.setCIDADE_END_COM("São Paulo");
+               pessoa.setESTADO_END_COM("SP");
+               pessoa.setTIPO_PESSOA("C");
             
-            PessoaDao pessoadao = new PessoaDao();
+               PessoaDao pessoadao = new PessoaDao();
             try {
-                 pessoadao.adiciona(pessoa);
-                 System.out.println("Registro salvo com sucesso! ");
+                 pessoadao.busca(pessoa);
+                if (pessoa != null) {
+                     System.out.println("Registro salvo com sucesso! ");
+                }
             } catch (SQLException ex) {
               System.out.println("Não foi possível salvar o cadastro..." + ex.getMessage());
               ex.printStackTrace();  

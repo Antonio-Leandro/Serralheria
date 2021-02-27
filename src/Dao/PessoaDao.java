@@ -10,22 +10,25 @@ import java.sql.SQLException;
 
 public class PessoaDao {
     ConnectionFactory connection = new ConnectionFactory();
+    Connection c = connection.getConnection();
     
     public void busca (Pessoa pessoa) throws SQLException {
-        Connection c = connection.getConnection();
         
         String sql = "Select CPF from tbl_pessoa where CPF = ?";
         PreparedStatement stmt = c.prepareStatement(sql);
+        stmt.setString(1, pessoa.getCPF());
         ResultSet rs = stmt.executeQuery();
         
-        //if (rs.next() !=null) {
-            
-        //}
+        if (rs.next()) {
+           System.out.println("Já existe um cadastro para este CPF!");
+           return;
+        } else {
+            this.adiciona(pessoa);
+        }
     }
     
      
     public void adiciona (Pessoa pessoa) throws SQLException {
-        Connection c =  connection.getConnection();
         
         String sql = "INSERT INTO tbl_pessoa ("
                      + "CPF,"
