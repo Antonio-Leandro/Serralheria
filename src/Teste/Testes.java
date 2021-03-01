@@ -39,13 +39,12 @@ public class Testes {
 
 		PessoaDao pessoadao = new PessoaDao();
 		try {
-			if (pessoadao.busca(pessoa)) {
-				System.out.println("Já existe um cadastro para este CPF!");
-
-			} else {
-				pessoadao.adiciona(pessoa);
-				System.out.println("Registro salvo com sucesso! ");
-			}
+		    if (pessoadao.busca(pessoa)) {
+		        System.out.println("Já existe um cadastro para este CPF!");
+	            } else {
+			    pessoadao.adiciona(pessoa);
+			    System.out.println("Registro salvo com sucesso! ");
+		    }
 		} catch (SQLException ex) {
 			System.out.println("Não foi possível salvar o cadastro..." + ex.getMessage());
 			ex.printStackTrace();
