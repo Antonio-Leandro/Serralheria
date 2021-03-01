@@ -12,19 +12,13 @@ public class PessoaDao {
     ConnectionFactory connection = new ConnectionFactory();
     Connection c = connection.getConnection();
     
-    public void busca (Pessoa pessoa) throws SQLException {
+    public boolean busca (Pessoa pessoa) throws SQLException {
         
         String sql = "Select CPF from tbl_pessoa where CPF = ?";
         PreparedStatement stmt = c.prepareStatement(sql);
         stmt.setString(1, pessoa.getCPF());
         ResultSet rs = stmt.executeQuery();
-        
-        if (rs.next()) {
-           System.out.println("Já existe um cadastro para este CPF!");
-           return;
-        } else {
-            this.adiciona(pessoa);
-        }
+        return rs.next();
     }
     
      
