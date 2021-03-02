@@ -47,7 +47,6 @@ public class Testes {
 		    }
 		} catch (SQLException ex) {
 			System.out.println("Não foi possível salvar o cadastro..." + ex.getMessage());
-			ex.printStackTrace();
 		}
                 
                 /*try {
