@@ -9,7 +9,7 @@ public class Testes {
 	public static void main(String[] args) throws SQLException {
 
 		Pessoa pessoa = new Pessoa();
-		pessoa.setCPF("164.881.778-58");
+		pessoa.setCPF("164.881.778-59");
 		pessoa.setNOME("Antonio Saldanha");
 		pessoa.setRG("24.259.699-X");
 		pessoa.setDATA_DE_NASCIMENTO("19/05/1976");
