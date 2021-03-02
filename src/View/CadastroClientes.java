@@ -127,6 +127,11 @@ public class CadastroClientes extends javax.swing.JFrame {
         jLabelUFComercial.setText("UF:");
 
         jButtonDeletar.setText("Deletar");
+        jButtonDeletar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDeletarActionPerformed(evt);
+            }
+        });
 
         jButtonEditar.setText("Editar");
 
@@ -410,31 +415,31 @@ public class CadastroClientes extends javax.swing.JFrame {
         
         Pessoa pessoa = new Pessoa();
         
-            pessoa.setCPF(jTextFieldCPF.getText().toString());
-            pessoa.setNOME(jTextFieldNome.getText().toString());
-            pessoa.setRG(jTextFieldRG.getText().toString());
-            pessoa.setDATA_DE_NASCIMENTO(jTextFieldDataNasc.getText().toString());
-            pessoa.setDATA_DE_CADASTRO(jTextFieldDataCadastro.getText().toString());
-            pessoa.setNACIONALIDADE(jTextFieldNacionalidade.getText().toString());
-            pessoa.setNATURALIDADE(jTextFieldNaturalidade.getText().toString().toString());
+            pessoa.setCPF(jTextFieldCPF.getText());
+            pessoa.setNOME(jTextFieldNome.getText());
+            pessoa.setRG(jTextFieldRG.getText());
+            pessoa.setDATA_DE_NASCIMENTO(jTextFieldDataNasc.getText());
+            pessoa.setDATA_DE_CADASTRO(jTextFieldDataCadastro.getText());
+            pessoa.setNACIONALIDADE(jTextFieldNacionalidade.getText());
+            pessoa.setNATURALIDADE(jTextFieldNaturalidade.getText());
             pessoa.setESTADO_CIVIL(jComboBoxTipoPessoa.getSelectedItem().toString());
-            pessoa.setCEP(jTextFieldCEP.getText().toString());
-            pessoa.setLOGRADOURO(jTextFieldRua.getText().toString());
-            pessoa.setNUMERO(jTextFieldNumero.getText().toString());
-            pessoa.setCOMPLEMENTO(jTextFieldComplemento.getText().toString());
-            pessoa.setBAIRRO(jTextFieldBairro.getText().toString());
-            pessoa.setCIDADE(jTextFieldCidade.getText().toString());
+            pessoa.setCEP(jTextFieldCEP.getText());
+            pessoa.setLOGRADOURO(jTextFieldRua.getText());
+            pessoa.setNUMERO(jTextFieldNumero.getText());
+            pessoa.setCOMPLEMENTO(jTextFieldComplemento.getText());
+            pessoa.setBAIRRO(jTextFieldBairro.getText());
+            pessoa.setCIDADE(jTextFieldCidade.getText());
             pessoa.setESTADO(jComboBoxUF.getSelectedItem().toString());
-            pessoa.setTELEFONE_FIXO(jTextFieldTelFixo.getText().toString());
-            pessoa.setCELULAR(jTextFieldCelular.getText().toString());
-            pessoa.setEMAIL(jTextFieldEmail.getText().toString());
-            pessoa.setEMPRESA(jTextFieldEmpresa.getText().toString());
-            pessoa.setCARGO(jTextFieldCargo.getText().toString());
-            pessoa.setEND_COMERCIAL(jTextFieldEnderecoComercial.getText().toString());
-            pessoa.setNUM_END_COM(jTextFieldNumeroComercial.getText().toString());
-            pessoa.setCEP_END_COM(jTextFieldCepComercial.getText().toString());
-            pessoa.setBAIRRO_END_COM(jTextFieldBairroComercial.getText().toString());
-            pessoa.setCIDADE_END_COM(jTextFieldCidadeComercial.getText().toString());
+            pessoa.setTELEFONE_FIXO(jTextFieldTelFixo.getText());
+            pessoa.setCELULAR(jTextFieldCelular.getText());
+            pessoa.setEMAIL(jTextFieldEmail.getText());
+            pessoa.setEMPRESA(jTextFieldEmpresa.getText());
+            pessoa.setCARGO(jTextFieldCargo.getText());
+            pessoa.setEND_COMERCIAL(jTextFieldEnderecoComercial.getText());
+            pessoa.setNUM_END_COM(jTextFieldNumeroComercial.getText());
+            pessoa.setCEP_END_COM(jTextFieldCepComercial.getText());
+            pessoa.setBAIRRO_END_COM(jTextFieldBairroComercial.getText());
+            pessoa.setCIDADE_END_COM(jTextFieldCidadeComercial.getText());
             pessoa.setESTADO_END_COM(jComboBoxUFComercial.getSelectedItem().toString());
             pessoa.setTIPO_PESSOA(jComboBoxTipoPessoa.getSelectedItem().toString());
             
@@ -448,16 +453,28 @@ public class CadastroClientes extends javax.swing.JFrame {
                  }         
             } catch (SQLException ex) {
                 System.out.println("Não foi possível salvar o cadastro..." + ex.getMessage());
-                ex.printStackTrace();
             }
     }//GEN-LAST:event_jButtonSalvarActionPerformed
 
+    private void jButtonDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeletarActionPerformed
+        Pessoa pessoa = new Pessoa();
+        pessoa.setCPF(jTextFieldCPF.getText());
+        PessoaDao pessoadao = new PessoaDao();
+        try {
+            if (pessoadao.busca(pessoa)) {
+                pessoadao.deleta(pessoa);
+            } else {
+                System.out.println("Não há registro com esta descrição na base! ");
+            }
+        } catch (SQLException ex) {
+            System.out.println("Não foi possível executar a ação! " + ex.getMessage());
+        }
+    }//GEN-LAST:event_jButtonDeletarActionPerformed
+
     public static void main(String args[]) {
 
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CadastroClientes().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new CadastroClientes().setVisible(true);
         });
     }
 

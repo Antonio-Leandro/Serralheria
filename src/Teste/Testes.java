@@ -9,7 +9,7 @@ public class Testes {
 	public static void main(String[] args) throws SQLException {
 
 		Pessoa pessoa = new Pessoa();
-		pessoa.setCPF("164.881.778-66");
+		pessoa.setCPF("164.881.778-58");
 		pessoa.setNOME("Antonio Saldanha");
 		pessoa.setRG("24.259.699-X");
 		pessoa.setDATA_DE_NASCIMENTO("19/05/1976");
@@ -38,7 +38,7 @@ public class Testes {
 		pessoa.setTIPO_PESSOA("C");
 
 		PessoaDao pessoadao = new PessoaDao();
-		/*try {
+		try {
 		    if (pessoadao.busca(pessoa)) {
 		        System.out.println("Já existe um cadastro para este CPF!");
 	            } else {
@@ -48,9 +48,9 @@ public class Testes {
 		} catch (SQLException ex) {
 			System.out.println("Não foi possível salvar o cadastro..." + ex.getMessage());
 			ex.printStackTrace();
-		}*/
+		}
                 
-                try {
+                /*try {
 		    if (pessoadao.busca(pessoa)) {
 		        pessoadao.deleta(pessoa);
                         System.out.println("Registro excluído com sucesso!");
@@ -61,6 +61,6 @@ public class Testes {
 		} catch (SQLException ex) {
 			System.out.println("Não foi possível executar a ação! " + ex.getMessage());
 			ex.printStackTrace();
-		}
+		}*/
 	}
 }
