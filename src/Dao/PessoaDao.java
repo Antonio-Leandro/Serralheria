@@ -85,5 +85,11 @@ public class PessoaDao {
         stmt.execute();
         stmt.close();
         c.close();
-    } 
+    }
+    public void deleta (Pessoa pessoa) throws SQLException {
+        String sql = "DELETE FROM tbl_pessoa WHERE CPF = ?";
+        PreparedStatement stmt = c.prepareStatement(sql);
+        stmt.setString(1, pessoa.getCPF());
+        stmt.execute();    
+    }
 }

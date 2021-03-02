@@ -452,7 +452,6 @@ public class CadastroClientes extends javax.swing.JFrame {
             }
     }//GEN-LAST:event_jButtonSalvarActionPerformed
 
-
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
