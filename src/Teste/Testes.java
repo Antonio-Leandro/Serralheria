@@ -9,10 +9,10 @@ public class Testes {
 	public static void main(String[] args) throws SQLException {
 
 		Pessoa pessoa = new Pessoa();
-		pessoa.setCPF("164.881.778-58");
-		pessoa.setNOME("Antonio Saldanha");
-		pessoa.setRG("24.259.699-X");
-		pessoa.setDATA_DE_NASCIMENTO("19/05/1976");
+		pessoa.setCPF("164.881.778-56");
+		pessoa.setNOME("Antonio Leandro Saldanha");
+		pessoa.setRG("24.259.699-0");
+		pessoa.setDATA_DE_NASCIMENTO("19/05/1975");
 		pessoa.setDATA_DE_CADASTRO("25/01/2021");
 		pessoa.setNACIONALIDADE("Brasileiro");
 		pessoa.setNATURALIDADE("Ceará");
@@ -24,7 +24,7 @@ public class Testes {
 		pessoa.setBAIRRO("Jardim Aladim");
 		pessoa.setCIDADE("São Paulo");
 		pessoa.setESTADO("SP");
-		pessoa.setTELEFONE_FIXO("(11)5921-3636");
+		pessoa.setTELEFONE_FIXO("(11)5921-3637");
 		pessoa.setCELULAR("(11)954.620.951");
 		pessoa.setEMAIL("aleandrosaldanha@bol.com.br");
 		pessoa.setEMPRESA("ALS TECNOLOGIA");
@@ -38,7 +38,7 @@ public class Testes {
 		pessoa.setTIPO_PESSOA("C");
 
 		PessoaDao pessoadao = new PessoaDao();
-		try {
+		/*try {
 		    if (pessoadao.busca(pessoa)) {
 		        System.out.println("Já existe um cadastro para este CPF!");
 	            } else {
@@ -47,7 +47,7 @@ public class Testes {
 		    }
 		} catch (SQLException ex) {
 			System.out.println("Não foi possível salvar o cadastro..." + ex.getMessage());
-		}
+		}*/
                 
                 /*try {
 		    if (pessoadao.busca(pessoa)) {
@@ -61,5 +61,24 @@ public class Testes {
 			System.out.println("Não foi possível executar a ação! " + ex.getMessage());
 			ex.printStackTrace();
 		}*/
+                
+                /*try {
+		    if (pessoadao.busca(pessoa)) {
+		        pessoadao.atualiza(pessoa);
+                        System.out.println("Registro atualizado com sucesso!");
+	            } else {
+			    pessoadao.adiciona(pessoa);
+			    System.out.println("Não há registro com esta descrição na base! ");
+		    }
+		} catch (SQLException ex) {
+			System.out.println("Não foi possível atualizar o cadastro..." + ex.getMessage());
+		}*/
+                
+                try {
+		     pessoadao.atualiza(pessoa);
+		     System.out.println("Registro atualizado com sucesso!");   
+		} catch (SQLException ex) {
+			System.out.println("Não foi possível atualizar o cadastro..." + ex.getMessage());
+		}
 	}
 }
