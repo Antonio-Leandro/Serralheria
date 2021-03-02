@@ -21,7 +21,6 @@ public class PessoaDao {
         return rs.next();
     }
     
-     
     public void adiciona (Pessoa pessoa) throws SQLException {
         
         String sql = "INSERT INTO tbl_pessoa ("
