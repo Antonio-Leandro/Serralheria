@@ -440,8 +440,12 @@ public class CadastroClientes extends javax.swing.JFrame {
             
             PessoaDao pessoadao = new PessoaDao();
             try {
-                pessoadao.adiciona(pessoa);
-                System.out.println("Cadastro salvo com sucesso! ");
+                 if (pessoadao.busca(pessoa)) {
+                     System.out.println("Já existe um cadastro para este CPF! ");
+                 } else {
+                     pessoadao.adiciona(pessoa);
+                     System.out.println("Cadastro salvo com sucesso! ");
+                 }         
             } catch (SQLException ex) {
                 System.out.println("Não foi possível salvar o cadastro..." + ex.getMessage());
                 ex.printStackTrace();
