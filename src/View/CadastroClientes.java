@@ -134,6 +134,11 @@ public class CadastroClientes extends javax.swing.JFrame {
         });
 
         jButtonEditar.setText("Editar");
+        jButtonEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEditarActionPerformed(evt);
+            }
+        });
 
         jButtonSalvar.setText("Salvar");
         jButtonSalvar.addActionListener(new java.awt.event.ActionListener() {
@@ -470,6 +475,45 @@ public class CadastroClientes extends javax.swing.JFrame {
             System.out.println("Não foi possível executar a ação! " + ex.getMessage());
         }
     }//GEN-LAST:event_jButtonDeletarActionPerformed
+
+    private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
+        Pessoa pessoa = new Pessoa();
+        
+        pessoa.setCPF(jTextFieldCPF.getText());
+        pessoa.setNOME(jTextFieldNome.getText());
+        pessoa.setRG(jTextFieldRG.getText());
+        pessoa.setDATA_DE_NASCIMENTO(jTextFieldDataNasc.getText());
+        pessoa.setDATA_DE_CADASTRO(jTextFieldDataCadastro.getText());
+        pessoa.setNACIONALIDADE(jTextFieldNacionalidade.getText());
+        pessoa.setNATURALIDADE(jTextFieldNaturalidade.getText());
+        pessoa.setESTADO_CIVIL(jComboBoxTipoPessoa.getSelectedItem().toString());
+        pessoa.setCEP(jTextFieldCEP.getText());
+        pessoa.setLOGRADOURO(jTextFieldRua.getText());
+        pessoa.setNUMERO(jTextFieldNumero.getText());
+        pessoa.setCOMPLEMENTO(jTextFieldComplemento.getText());
+        pessoa.setBAIRRO(jTextFieldBairro.getText());
+        pessoa.setCIDADE(jTextFieldCidade.getText());
+        pessoa.setESTADO(jComboBoxUF.getSelectedItem().toString());
+        pessoa.setTELEFONE_FIXO(jTextFieldTelFixo.getText());
+        pessoa.setCELULAR(jTextFieldCelular.getText());
+        pessoa.setEMAIL(jTextFieldEmail.getText());
+        pessoa.setEMPRESA(jTextFieldEmpresa.getText());
+        pessoa.setCARGO(jTextFieldCargo.getText());
+        pessoa.setEND_COMERCIAL(jTextFieldEnderecoComercial.getText());
+        pessoa.setNUM_END_COM(jTextFieldNumeroComercial.getText());
+        pessoa.setCEP_END_COM(jTextFieldCepComercial.getText());
+        pessoa.setBAIRRO_END_COM(jTextFieldBairroComercial.getText());
+        pessoa.setCIDADE_END_COM(jTextFieldCidadeComercial.getText());
+        pessoa.setESTADO_END_COM(jComboBoxUFComercial.getSelectedItem().toString());
+        pessoa.setTIPO_PESSOA(jComboBoxTipoPessoa.getSelectedItem().toString());
+            
+        PessoaDao pessoadao = new PessoaDao();
+        try {
+            pessoadao.atualiza(pessoa);
+        } catch (SQLException ex) {
+            System.out.println("Não foi possível atualizar o registro! " + ex.getMessage());
+        }
+    }//GEN-LAST:event_jButtonEditarActionPerformed
 
     public static void main(String args[]) {
 
