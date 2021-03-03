@@ -96,10 +96,9 @@ public class PessoaDao {
         c.close();
     }
     public void atualiza (Pessoa pessoa) throws SQLException {
-        String sql = "UPDATE tbl_pessoa SET CPF=?,"
-                + "NOME=?,"
+        String sql = "UPDATE tbl_pessoa SET NOME=?,"
                 + "RG=?,"
-                + "DATA_DE_NASCIMENTO=?,"
+                + "DATA_NASC=?,"
                 + "DATA_DE_CADASTRO=?,"
                 + "NACIONALIDADE=?,"
                 + "NATURALIDADE=?,"
@@ -111,7 +110,7 @@ public class PessoaDao {
                 + "BAIRRO=?,"
                 + "CIDADE=?,"
                 + "ESTADO=?,"
-                + "TELEFONE_FIXO=?,"
+                + "TEL_FIXO=?,"
                 + "CELULAR=?,"
                 + "EMAIL=?,"
                 + "EMPRESA=?,"
