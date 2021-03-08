@@ -67,7 +67,7 @@ public class CadastroClientes extends javax.swing.JFrame {
         jLabelNumeroComercial = new javax.swing.JLabel();
         jTextFieldNumeroComercial = new javax.swing.JTextField();
         jLabelTipoPessoa = new javax.swing.JLabel();
-        jComboBoxEstadoCivil1 = new javax.swing.JComboBox<>();
+        jComboBoxEstadoCivil = new javax.swing.JComboBox<>();
         jFormattedDataNasc = new javax.swing.JFormattedTextField();
         jFormattedRG = new javax.swing.JFormattedTextField();
         jFormattedDataCadastro = new javax.swing.JFormattedTextField();
@@ -166,7 +166,7 @@ public class CadastroClientes extends javax.swing.JFrame {
 
         jLabelTipoPessoa.setText("Tipo pessoal:");
 
-        jComboBoxEstadoCivil1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Casado(a)", "Solteiro(a)", "União Estável" }));
+        jComboBoxEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Casado(a)", "Solteiro(a)", "União Estável" }));
 
         try {
             jFormattedDataNasc.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
@@ -337,7 +337,7 @@ public class CadastroClientes extends javax.swing.JFrame {
                                             .addGap(13, 13, 13)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(jLabelEstadoCivil)
-                                                .addComponent(jComboBoxEstadoCivil1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(jComboBoxEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGap(10, 10, 10)
                                             .addComponent(jLabelTipoPessoa))
                                         .addGroup(layout.createSequentialGroup()
@@ -365,7 +365,7 @@ public class CadastroClientes extends javax.swing.JFrame {
                     .addComponent(jFormattedDataNasc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jFormattedRG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jFormattedCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBoxEstadoCivil1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBoxTipoPessoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -499,6 +499,34 @@ public class CadastroClientes extends javax.swing.JFrame {
         try {
             if (pessoadao.busca(pessoa)) {
                 pessoadao.deleta(pessoa);
+                JOptionPane.showMessageDialog(null, "Registro excluído com sucesso! ");
+                jTextFieldNome.setText("");
+                jFormattedCPF.setText("");
+                jFormattedRG.setText("");
+                jFormattedDataNasc.setText("");
+                jComboBoxEstadoCivil.setToolTipText("");
+                jComboBoxTipoPessoa.setToolTipText("");
+                jTextFieldNacionalidade.setText("");
+                jTextFieldNaturalidade.setText("");
+                jFormattedDataCadastro.setText("");
+                jFormattedCEP.setText("");
+                jTextFieldRua.setText("");
+                jTextFieldNumero.setText("");
+                jTextFieldComplemento.setText("");
+                jTextFieldBairro.setText("");
+                jTextFieldCidade.setText("");
+                jComboBoxUF.setToolTipText("");
+                jTextFieldTelFixo.setText("");
+                jTextFieldCelular.setText("");
+                jTextFieldEmail.setText("");
+                jTextFieldEmpresa.setText("");
+                jTextFieldCargo.setText("");
+                jTextFieldEnderecoComercial.setText("");
+                jFormattedCepComercial.setText("");
+                jTextFieldBairroComercial.setText("");
+                jTextFieldNumeroComercial.setText("");
+                jTextFieldCidadeComercial.setText("");
+                jComboBoxUFComercial.setToolTipText("");
             } else {
                 System.out.println("Não há registro com esta descrição na base! ");
             }
@@ -558,7 +586,7 @@ public class CadastroClientes extends javax.swing.JFrame {
     private javax.swing.JButton jButtonEditar;
     private javax.swing.JButton jButtonSair;
     private javax.swing.JButton jButtonSalvar;
-    private javax.swing.JComboBox<String> jComboBoxEstadoCivil1;
+    private javax.swing.JComboBox<String> jComboBoxEstadoCivil;
     private javax.swing.JComboBox<String> jComboBoxTipoPessoa;
     private javax.swing.JComboBox<String> jComboBoxUF;
     private javax.swing.JComboBox<String> jComboBoxUFComercial;
