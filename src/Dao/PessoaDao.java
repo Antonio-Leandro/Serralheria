@@ -50,8 +50,10 @@ public class PessoaDao {
                      + "BAIRRO_END_COM,"
                      + "CIDADE_END_COM,"
                      + "ESTADO_END_COM,"
-                     + "TIPO_PESSOA)"
-                     + "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                     + "TIPO_PESSOA,"
+                     + "LOGIN,"
+                     + "SENHA)"
+                     + "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         
         PreparedStatement stmt = c.prepareStatement(sql);
         stmt.setString(1, pessoa.getCPF());
@@ -81,6 +83,8 @@ public class PessoaDao {
         stmt.setString(25, pessoa.getCIDADE_END_COM());
         stmt.setString(26, pessoa.getESTADO_END_COM());
         stmt.setString(27, pessoa.getTIPO_PESSOA());
+        stmt.setString(28, pessoa.getLOGIN());
+        stmt.setString(29, pessoa.getSENHA());
         
         stmt.execute();
         stmt.close();
@@ -121,7 +125,9 @@ public class PessoaDao {
                 + "BAIRRO_END_COM=?,"
                 + "CIDADE_END_COM=?,"
                 + "ESTADO_END_COM=?,"
-                + "TIPO_PESSOA=?"
+                + "TIPO_PESSOA=?,"
+                + "LOGIN=?,"
+                + "SENHA=?"
                 + "WHERE CPF=?";
         PreparedStatement stmt = c.prepareStatement(sql);
         
@@ -152,6 +158,8 @@ public class PessoaDao {
         stmt.setString(25, pessoa.getCIDADE_END_COM());
         stmt.setString(26, pessoa.getESTADO_END_COM());
         stmt.setString(27, pessoa.getTIPO_PESSOA());
+        stmt.setString(28, pessoa.getLOGIN());
+        stmt.setString(29, pessoa.getSENHA());
         
         stmt.executeUpdate();
         stmt.close();

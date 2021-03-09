@@ -28,6 +28,8 @@ private String BAIRRO_END_COM;
 private String CIDADE_END_COM;
 private String ESTADO_END_COM;
 private String TIPO_PESSOA;
+private String LOGIN;
+private String SENHA;
 
     public String getCPF() {
         return CPF;
@@ -244,4 +246,21 @@ private String TIPO_PESSOA;
     public void setTIPO_PESSOA(String TIPO_PESSOA) {
         this.TIPO_PESSOA = TIPO_PESSOA;
     }
+
+    public String getLOGIN() {
+        return LOGIN;
+    }
+
+    public void setLOGIN(String LOGIN) {
+        this.LOGIN = LOGIN;
+    }
+
+    public String getSENHA() {
+        return SENHA;
+    }
+
+    public void setSENHA(String SENHA) {
+        this.SENHA = SENHA;
+    }
+    
 }
