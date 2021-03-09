@@ -9,11 +9,10 @@ public class Testes {
 	public static void main(String[] args) throws SQLException {
 
 		Pessoa pessoa = new Pessoa();
-		pessoa.setCPF("164.881.778-59");
+		pessoa.setCPF("164.881.778-56");
 		pessoa.setNOME("Antonio Saldanha");
 		pessoa.setRG("24.259.699-X");
 		pessoa.setDATA_DE_NASCIMENTO("19/05/1976");
-		pessoa.setCPF("164.881.778-56");
 		pessoa.setNOME("Antonio Leandro Saldanha");
 		pessoa.setRG("24.259.699-0");
 		pessoa.setDATA_DE_NASCIMENTO("19/05/1975");
@@ -40,6 +39,8 @@ public class Testes {
 		pessoa.setCIDADE_END_COM("São Paulo");
 		pessoa.setESTADO_END_COM("SP");
 		pessoa.setTIPO_PESSOA("C");
+                pessoa.setLOGIN("Antonio");
+                pessoa.setSENHA("1234");
 
 		PessoaDao pessoadao = new PessoaDao();
 		/*try {
@@ -53,7 +54,7 @@ public class Testes {
 			System.out.println("Não foi possível salvar o cadastro..." + ex.getMessage());
 		}*/
                 
-                /*try {
+                try {
 		    if (pessoadao.busca(pessoa)) {
 		        pessoadao.deleta(pessoa);
                         System.out.println("Registro excluído com sucesso!");
@@ -64,7 +65,7 @@ public class Testes {
 		} catch (SQLException ex) {
 			System.out.println("Não foi possível executar a ação! " + ex.getMessage());
 			ex.printStackTrace();
-		}*/
+		}
                 
                 /*try {
 		    if (pessoadao.busca(pessoa)) {
@@ -78,11 +79,11 @@ public class Testes {
 			System.out.println("Não foi possível atualizar o cadastro..." + ex.getMessage());
 		}*/
                 
-                try {
+                /*try {
 		     pessoadao.atualiza(pessoa);
 		     System.out.println("Registro atualizado com sucesso!");   
 		} catch (SQLException ex) {
 			System.out.println("Não foi possível atualizar o cadastro..." + ex.getMessage());
-		}
+		}*/
 	}
 }
