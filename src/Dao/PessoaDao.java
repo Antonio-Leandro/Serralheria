@@ -14,9 +14,11 @@ public class PessoaDao {
     
     public boolean busca (Pessoa pessoa) throws SQLException {
         
-        String sql = "Select CPF from tbl_pessoa where CPF = ?";
+        String sql = "Select CPF from tbl_pessoa where CPF = ? or LOGIN = ? and SENHA = ?";
         PreparedStatement stmt = c.prepareStatement(sql);
         stmt.setString(1, pessoa.getCPF());
+        stmt.setString(2, pessoa.getLOGIN());
+        stmt.setString(3, pessoa.getSENHA());
         ResultSet rs = stmt.executeQuery();
         return rs.next();
     }

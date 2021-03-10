@@ -1,6 +1,11 @@
 package View;
 
+import Dao.PessoaDao;
+import Modelo.Pessoa;
 import java.awt.event.KeyEvent;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 
@@ -85,15 +90,23 @@ public class Login extends javax.swing.JFrame {
 
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
         
-        if(TxtUsuario.getText().equals("Antonio")&&PassSenha.getText().equals("1234")){
-        TelaPrincipal tela = new TelaPrincipal();
-                      tela.setVisible(true);
-        dispose();
-        }                                              
-        else{
-            JOptionPane.showMessageDialog(rootPane, "Acesso Negado!");
-            TxtUsuario.setText("");
-            PassSenha.setText("");
+        Pessoa pessoa = new Pessoa();
+        pessoa.setLOGIN(TxtUsuario.getText());
+        pessoa.setSENHA(PassSenha.getText());
+        
+        PessoaDao pessoadao = new PessoaDao();
+        try {
+            if (pessoadao.busca(pessoa)) {
+                TelaPrincipal tela = new TelaPrincipal();
+                tela.setVisible(true);
+                dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "Usuário ou Senha inválido!");
+                TxtUsuario.setText("");
+                PassSenha.setText("");
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro!"+ex.getMessage());
         }   
     }//GEN-LAST:event_jButtonEntrarActionPerformed
 
@@ -102,16 +115,24 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonSairActionPerformed
 
     private void PassSenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PassSenhaKeyPressed
+        Pessoa pessoa = new Pessoa();
+        pessoa.setLOGIN(TxtUsuario.getText());
+        pessoa.setSENHA(PassSenha.getText());
+        PessoaDao pessoadao = new PessoaDao();
+        
         if (evt.getKeyCode()==KeyEvent.VK_ENTER) {
-            if(TxtUsuario.getText().equals("Antonio")&&PassSenha.getText().equals("1234")){
-                TelaPrincipal tela = new TelaPrincipal();
-                     tela.setVisible(true);
-                        dispose();
-            }                                              
-            else{
-                JOptionPane.showMessageDialog(rootPane, "Acesso Negado!");
-                TxtUsuario.setText("");
-                PassSenha.setText("");
+            try {
+                if (pessoadao.busca(pessoa)) {
+                    TelaPrincipal tela = new TelaPrincipal();
+                    tela.setVisible(true);
+                    dispose();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Usuário ou Senha inválido!");
+                    TxtUsuario.setText("");
+                    PassSenha.setText("");
+                }
+            } catch (SQLException ex) {
+                
             }
         }
     }//GEN-LAST:event_PassSenhaKeyPressed
