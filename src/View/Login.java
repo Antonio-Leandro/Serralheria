@@ -4,8 +4,6 @@ import Dao.PessoaDao;
 import Modelo.Pessoa;
 import java.awt.event.KeyEvent;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 
@@ -64,7 +62,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonEntrar);
-        jButtonEntrar.setBounds(320, 170, 63, 23);
+        jButtonEntrar.setBounds(350, 170, 63, 30);
 
         jButtonSair.setText("Sair");
         jButtonSair.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +71,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonSair);
-        jButtonSair.setBounds(410, 170, 80, 23);
+        jButtonSair.setBounds(430, 170, 60, 30);
 
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jLabel1.setText("Software Serralheria");

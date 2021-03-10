@@ -43,7 +43,7 @@ public class Testes {
                 pessoa.setSENHA("1234");
 
 		PessoaDao pessoadao = new PessoaDao();
-		/*try {
+		try {
 		    if (pessoadao.busca(pessoa)) {
 		        System.out.println("Já existe um cadastro para este CPF!");
 	            } else {
@@ -52,9 +52,9 @@ public class Testes {
 		    }
 		} catch (SQLException ex) {
 			System.out.println("Não foi possível salvar o cadastro..." + ex.getMessage());
-		}*/
+		}
                 
-                try {
+                /*try {
 		    if (pessoadao.busca(pessoa)) {
 		        pessoadao.deleta(pessoa);
                         System.out.println("Registro excluído com sucesso!");
@@ -65,7 +65,7 @@ public class Testes {
 		} catch (SQLException ex) {
 			System.out.println("Não foi possível executar a ação! " + ex.getMessage());
 			ex.printStackTrace();
-		}
+		}*/
                 
                 /*try {
 		    if (pessoadao.busca(pessoa)) {
