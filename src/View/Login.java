@@ -90,7 +90,7 @@ public class Login extends javax.swing.JFrame {
         
         Pessoa pessoa = new Pessoa();
         pessoa.setLOGIN(TxtUsuario.getText());
-        pessoa.setSENHA(PassSenha.getText().toString());
+        pessoa.setSENHA(PassSenha.getText());
         
         PessoaDao pessoadao = new PessoaDao();
         try {
