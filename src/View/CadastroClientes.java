@@ -235,7 +235,7 @@ public class CadastroClientes extends javax.swing.JFrame {
                                     .addComponent(jLabelBairro)
                                     .addComponent(jTextFieldBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jLabelComplemento))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextFieldCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelCidade))
@@ -484,7 +484,7 @@ public class CadastroClientes extends javax.swing.JFrame {
                 .addGap(54, 54, 54))
         );
 
-        setSize(new java.awt.Dimension(785, 461));
+        setSize(new java.awt.Dimension(827, 461));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
