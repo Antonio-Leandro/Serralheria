@@ -43,7 +43,7 @@ public class Testes {
                 pessoa.setSENHA("1234");
 
 		PessoaDao pessoadao = new PessoaDao();
-		try {
+		/*try {
 		    if (pessoadao.busca(pessoa)) {
 		        System.out.println("Já existe um cadastro para este CPF!");
 	            } else {
@@ -52,7 +52,7 @@ public class Testes {
 		    }
 		} catch (SQLException ex) {
 			System.out.println("Não foi possível salvar o cadastro..." + ex.getMessage());
-		}
+		}*/
                 
                 /*try {
 		    if (pessoadao.busca(pessoa)) {
@@ -85,5 +85,8 @@ public class Testes {
 		} catch (SQLException ex) {
 			System.out.println("Não foi possível atualizar o cadastro..." + ex.getMessage());
 		}*/
+                
+                pessoadao.listar();
 	}
+        
 }

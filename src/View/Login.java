@@ -113,13 +113,13 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonSairActionPerformed
 
     private void PassSenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PassSenhaKeyPressed
-        //Pessoa pessoa = new Pessoa();
-        //pessoa.setLOGIN(TxtUsuario.getText());
-        //pessoa.setSENHA(PassSenha.getText());
+        Pessoa pessoa = new Pessoa();
+        pessoa.setLOGIN(TxtUsuario.getText());
+        pessoa.setSENHA(PassSenha.getText());
         
-        //PessoaDao pessoadao = new PessoaDao();
+        PessoaDao pessoadao = new PessoaDao();
         
-        /*if (evt.getKeyCode()==KeyEvent.VK_ENTER) {
+        if (evt.getKeyCode()==KeyEvent.VK_ENTER) {
             try {
                 if (pessoadao.busca(pessoa)) {
                     TelaPrincipal tela = new TelaPrincipal();
@@ -133,7 +133,7 @@ public class Login extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 
             }
-        }*/
+        }
     }//GEN-LAST:event_PassSenhaKeyPressed
 
     public static void main(String args[]) {
