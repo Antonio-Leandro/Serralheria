@@ -2,10 +2,13 @@ package Factory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 
 public class ConnectionFactory {
-    
+    public Statement stmt;
+    public ResultSet rs;
     public Connection getConnection() {
         try {
             //System.out.println("Conectando no banco de dados...");

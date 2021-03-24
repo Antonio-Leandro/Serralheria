@@ -6,25 +6,31 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 import java.util.Date;
+import javax.swing.table.DefaultTableModel;
 
 public class CadastroClientes extends javax.swing.JFrame {
-
-        public CadastroClientes() {
-        initComponents();
-        this.setLocationRelativeTo(null);
-        jFormattedDataCadastro.setText(new SimpleDateFormat("dd/MM/yyyy").format(new Date(System.currentTimeMillis())));
+      
+    public CadastroClientes() {
+    initComponents();
+    this.setLocationRelativeTo(null);
+    jFormattedDataCadastro.setText(new SimpleDateFormat("dd/MM/yyyy").format(new Date(System.currentTimeMillis())));
+    preencherTabela();
+        
     }
-        
-        public void carregaTabela() {
-            PessoaDao pdao = new PessoaDao();
-            for (Pessoa p: pdao.listar()) {
-                //jTbPessoa.addRow(new Object[]{
-                    //p.getCPF()
-                //});
-            }
+    public void preencherTabela() {
+        DefaultTableModel modelo = (DefaultTableModel)jTbPessoa.getModel();
+        modelo.setNumRows(0);
+        PessoaDao pdao = new PessoaDao();
+        for(Pessoa p: pdao.listar()) {
+            modelo.addRow(new Object[]{
+                p.getCPF(),
+                p.getNOME(),
+                p.getCELULAR(),
+                p.getEMAIL()
+            });
         }
-
-        
+    }
+  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -251,15 +257,20 @@ public class CadastroClientes extends javax.swing.JFrame {
 
         jTbPessoa.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
+
             },
             new String [] {
-                "CPF", "NOME", "CEP", "LOGRADOURO", "NUMERO", "COMPLEMENTO", "BAIRRO", "CIDADE", "ESTADO", "CELULAR"
+                "CPF", "NOME", "CELULAR", "EMAIL"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(jTbPessoa);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -524,9 +535,9 @@ public class CadastroClientes extends javax.swing.JFrame {
                     .addComponent(jTextFieldCidadeComercial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBoxUFComercial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldNumeroComercial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jButtonEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -536,7 +547,7 @@ public class CadastroClientes extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        setSize(new java.awt.Dimension(823, 758));
+        setSize(new java.awt.Dimension(823, 673));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -614,6 +625,7 @@ public class CadastroClientes extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 JOptionPane.showMessageDialog(null, "Cadastro salvo com sucesso! " + ex.getMessage());
             }
+            //preencherTabela();
     }//GEN-LAST:event_jButtonSalvarActionPerformed
 
     private void jButtonDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeletarActionPerformed
@@ -712,7 +724,7 @@ public class CadastroClientes extends javax.swing.JFrame {
         tela.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButtonSairActionPerformed
-
+  
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(() -> {
