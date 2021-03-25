@@ -625,7 +625,7 @@ public class CadastroClientes extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 JOptionPane.showMessageDialog(null, "Cadastro salvo com sucesso! " + ex.getMessage());
             }
-            //preencherTabela();
+            preencherTabela();
     }//GEN-LAST:event_jButtonSalvarActionPerformed
 
     private void jButtonDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeletarActionPerformed
@@ -672,6 +672,7 @@ public class CadastroClientes extends javax.swing.JFrame {
         } catch (SQLException ex) {
             System.out.println("Não foi possível executar a ação! " + ex.getMessage());
         }
+        preencherTabela();
     }//GEN-LAST:event_jButtonDeletarActionPerformed
 
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
@@ -713,6 +714,7 @@ public class CadastroClientes extends javax.swing.JFrame {
         } catch (SQLException ex) {
             System.out.println("Não foi possível atualizar o registro! " + ex.getMessage());
         }
+        preencherTabela();
     }//GEN-LAST:event_jButtonEditarActionPerformed
 
     private void jComboBoxUFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxUFActionPerformed
