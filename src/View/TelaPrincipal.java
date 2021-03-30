@@ -6,6 +6,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     
     public TelaPrincipal() {
         initComponents();
+        //setExtendedState(MAXIMIZED_BOTH);
     }
 
     @SuppressWarnings("unchecked")
@@ -75,11 +76,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LblFundoTelaPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(LblFundoTelaPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 798, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LblFundoTelaPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(LblFundoTelaPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 530, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         setSize(new java.awt.Dimension(814, 589));
@@ -89,25 +92,25 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void MenuItemCadastroDeClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeClientesActionPerformed
         CadastroClientes cadastroclientes = new CadastroClientes();
         cadastroclientes.setVisible(true);
-        this.dispose();
+        //this.dispose();
     }//GEN-LAST:event_MenuItemCadastroDeClientesActionPerformed
 
     private void MenuItemCadastroDeFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeFornecedoresActionPerformed
         CadastroFornecedores cadastrofornecedores = new CadastroFornecedores();
         cadastrofornecedores.setVisible(true);
-        this.dispose();
+        //this.dispose();
     }//GEN-LAST:event_MenuItemCadastroDeFornecedoresActionPerformed
 
     private void MenuItemCadastroDeProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeProdutosActionPerformed
         CadastroProdutos cadastroprodutos = new CadastroProdutos();
         cadastroprodutos.setVisible(true);
-        this.dispose();
+        //this.dispose();
     }//GEN-LAST:event_MenuItemCadastroDeProdutosActionPerformed
 
     private void MenuItemCadastroDeFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeFuncionariosActionPerformed
         CadastroFuncionarios cadastrofuncionarios = new CadastroFuncionarios();
         cadastrofuncionarios.setVisible(true);
-        this.dispose();
+        //this.dispose();
     }//GEN-LAST:event_MenuItemCadastroDeFuncionariosActionPerformed
 
  

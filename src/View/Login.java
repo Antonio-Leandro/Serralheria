@@ -94,7 +94,7 @@ public class Login extends javax.swing.JFrame {
         
         PessoaDao pessoadao = new PessoaDao();
         try {
-            if (pessoadao.busca(pessoa)) {
+            if (pessoadao.login(pessoa)) {
                 TelaPrincipal tela = new TelaPrincipal();
                 tela.setVisible(true);
                 dispose();
