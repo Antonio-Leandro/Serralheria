@@ -30,7 +30,37 @@ public class CadastroClientes extends javax.swing.JFrame {
             });
         }
     }
-  
+    public void limpaCampos() {
+        jTextFieldNome.setText("");
+        jFormattedCPF.setText("");
+        jFormattedRG.setText("");
+        jFormattedDataNasc.setText("");
+        jComboBoxEstadoCivil.setSelectedItem(null);
+        jComboBoxTipoPessoa.setSelectedItem(null);
+        jTextFieldNacionalidade.setText("");
+        jTextFieldNaturalidade.setText("");
+        jFormattedDataCadastro.setText("");
+        jFormattedCEP.setText("");
+        jTextFieldRua.setText("");
+        jTextFieldNumero.setText("");
+        jTextFieldComplemento.setText("");
+        jTextFieldBairro.setText("");
+        jTextFieldCidade.setText("");
+        jComboBoxUF.setSelectedItem(null);
+        jFormattedTelFixo.setText("");
+        jFormattedCelular.setText("");
+        jTextFieldEmail.setText("");
+        jTextFieldEmpresa.setText("");
+        jTextFieldCargo.setText("");
+        jTextFieldEnderecoComercial.setText("");
+        jFormattedCepComercial.setText("");
+        jTextFieldBairroComercial.setText("");
+        jTextFieldNumeroComercial.setText("");
+        jTextFieldCidadeComercial.setText("");
+        jComboBoxUFComercial.setSelectedItem(null);
+        jTextFieldLogin.setText("");
+        jPasswordSenha.setText("");
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -427,8 +457,8 @@ public class CadastroClientes extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addGap(40, 40, 40))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 767, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -542,11 +572,11 @@ public class CadastroClientes extends javax.swing.JFrame {
                         .addComponent(jButtonDeletar))
                     .addComponent(jButtonSalvar, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(9, 9, 9)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48))
         );
 
-        setSize(new java.awt.Dimension(787, 627));
+        setSize(new java.awt.Dimension(794, 627));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -591,35 +621,7 @@ public class CadastroClientes extends javax.swing.JFrame {
                 } else {
                     pessoadao.adiciona(pessoa);
                     JOptionPane.showMessageDialog(null, "Cadastro salvo com sucesso! ");
-                    jTextFieldNome.setText("");
-                    jFormattedCPF.setText("");
-                    jFormattedRG.setText("");
-                    jFormattedDataNasc.setText("");
-                    jComboBoxEstadoCivil.setToolTipText("");
-                    jComboBoxTipoPessoa.setToolTipText("");
-                    jTextFieldNacionalidade.setText("");
-                    jTextFieldNaturalidade.setText("");
-                    jFormattedDataCadastro.setText("");
-                    jFormattedCEP.setText("");
-                    jTextFieldRua.setText("");
-                    jTextFieldNumero.setText("");
-                    jTextFieldComplemento.setText("");
-                    jTextFieldBairro.setText("");
-                    jTextFieldCidade.setText("");
-                    jComboBoxUF.setToolTipText("");
-                    jFormattedTelFixo.setText("");
-                    jFormattedCelular.setText("");
-                    jTextFieldEmail.setText("");
-                    jTextFieldEmpresa.setText("");
-                    jTextFieldCargo.setText("");
-                    jTextFieldEnderecoComercial.setText("");
-                    jFormattedCepComercial.setText("");
-                    jTextFieldBairroComercial.setText("");
-                    jTextFieldNumeroComercial.setText("");
-                    jTextFieldCidadeComercial.setText("");
-                    jComboBoxUFComercial.setToolTipText("");
-                    jTextFieldLogin.setText("");
-                    jPasswordSenha.setText("");
+                    this.limpaCampos();
                 }         
             } catch (SQLException ex) {
                 JOptionPane.showMessageDialog(null, "Cadastro salvo com sucesso! " + ex.getMessage());
@@ -635,36 +637,7 @@ public class CadastroClientes extends javax.swing.JFrame {
             if (pessoadao.busca(pessoa)) {
                 pessoadao.deleta(pessoa);
                 JOptionPane.showMessageDialog(null, "Registro excluído com sucesso! ");
-                jTextFieldNome.setText("");
-                jFormattedCPF.setText("");
-                jFormattedRG.setText("");
-                jFormattedDataNasc.setText("");
-                jComboBoxEstadoCivil.setToolTipText("");
-                jComboBoxTipoPessoa.setToolTipText("");
-                jTextFieldNacionalidade.setText("");
-                jTextFieldNaturalidade.setText("");
-                jFormattedDataCadastro.setText("");
-                jFormattedCEP.setText("");
-                jTextFieldRua.setText("");
-                jTextFieldNumero.setText("");
-                jTextFieldComplemento.setText("");
-                jTextFieldBairro.setText("");
-                jTextFieldCidade.setText("");
-                jComboBoxUF.setToolTipText("");
-                jFormattedTelFixo.setText("");
-                jFormattedCelular.setText("");
-                jTextFieldEmail.setText("");
-                jTextFieldEmpresa.setText("");
-                jTextFieldCargo.setText("");
-                jTextFieldEnderecoComercial.setText("");
-                jFormattedCepComercial.setText("");
-                jTextFieldBairroComercial.setText("");
-                jTextFieldNumeroComercial.setText("");
-                jTextFieldCidadeComercial.setText("");
-                jComboBoxUFComercial.setToolTipText("");
-                jTextFieldLogin.setText("");
-                jPasswordSenha.setText("");
-                    
+                this.limpaCampos();    
             } else {
                 System.out.println("Não há registro com esta descrição na base! ");
             }
