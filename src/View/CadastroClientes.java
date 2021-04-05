@@ -39,7 +39,7 @@ public class CadastroClientes extends javax.swing.JFrame {
         jComboBoxTipoPessoa.setSelectedItem(null);
         jTextFieldNacionalidade.setText("");
         jTextFieldNaturalidade.setText("");
-        jFormattedDataCadastro.setText("");
+        //jFormattedDataCadastro.setText("");
         jFormattedCEP.setText("");
         jTextFieldRua.setText("");
         jTextFieldNumero.setText("");
@@ -591,14 +591,18 @@ public class CadastroClientes extends javax.swing.JFrame {
             pessoa.setDATA_DE_CADASTRO(jFormattedDataCadastro.getText());          
             pessoa.setNACIONALIDADE(jTextFieldNacionalidade.getText());
             pessoa.setNATURALIDADE(jTextFieldNaturalidade.getText());
-            pessoa.setESTADO_CIVIL(jComboBoxTipoPessoa.getSelectedItem().toString());
+            if (jComboBoxTipoPessoa.getSelectedIndex()!=-1) {
+                pessoa.setESTADO_CIVIL(jComboBoxTipoPessoa.getSelectedItem().toString());
+            }
             pessoa.setCEP(jFormattedCEP.getText());
             pessoa.setLOGRADOURO(jTextFieldRua.getText());
             pessoa.setNUMERO(jTextFieldNumero.getText());
             pessoa.setCOMPLEMENTO(jTextFieldComplemento.getText());
             pessoa.setBAIRRO(jTextFieldBairro.getText());
             pessoa.setCIDADE(jTextFieldCidade.getText());
-            pessoa.setESTADO(jComboBoxUF.getSelectedItem().toString());
+            if (jComboBoxUF.getSelectedIndex()!=-1) {
+                pessoa.setESTADO(jComboBoxUF.getSelectedItem().toString());
+            }          
             pessoa.setTELEFONE_FIXO(jFormattedTelFixo.getText());
             pessoa.setCELULAR(jFormattedCelular.getText());
             pessoa.setEMAIL(jTextFieldEmail.getText());
@@ -609,8 +613,12 @@ public class CadastroClientes extends javax.swing.JFrame {
             pessoa.setCEP_END_COM(jFormattedCepComercial.getText());
             pessoa.setBAIRRO_END_COM(jTextFieldBairroComercial.getText());
             pessoa.setCIDADE_END_COM(jTextFieldCidadeComercial.getText());
-            pessoa.setESTADO_END_COM(jComboBoxUFComercial.getSelectedItem().toString());
-            pessoa.setTIPO_PESSOA(jComboBoxTipoPessoa.getSelectedItem().toString());
+            if (jComboBoxUFComercial.getSelectedIndex()!=-1) {
+               pessoa.setESTADO_END_COM(jComboBoxUFComercial.getSelectedItem().toString()); 
+            }
+            if (jComboBoxTipoPessoa.getSelectedIndex()!=-1) {
+               pessoa.setTIPO_PESSOA(jComboBoxTipoPessoa.getSelectedItem().toString()); 
+            }
             pessoa.setLOGIN(jTextFieldLogin.getText());
             pessoa.setSENHA(jPasswordSenha.getText());
               
@@ -624,7 +632,7 @@ public class CadastroClientes extends javax.swing.JFrame {
                     this.limpaCampos();
                 }         
             } catch (SQLException ex) {
-                JOptionPane.showMessageDialog(null, "Cadastro salvo com sucesso! " + ex.getMessage());
+                JOptionPane.showMessageDialog(null, "Não foi possível efetuar o cadastro! " + ex.getMessage());
             }
             preencherTabela();
     }//GEN-LAST:event_jButtonSalvarActionPerformed

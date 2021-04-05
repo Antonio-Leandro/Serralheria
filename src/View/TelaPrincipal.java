@@ -92,7 +92,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void MenuItemCadastroDeClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeClientesActionPerformed
         CadastroClientes cadastroclientes = new CadastroClientes();
         cadastroclientes.setVisible(true);
-        //this.dispose();
+        this.dispose();
     }//GEN-LAST:event_MenuItemCadastroDeClientesActionPerformed
 
     private void MenuItemCadastroDeFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeFornecedoresActionPerformed
