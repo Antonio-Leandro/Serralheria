@@ -537,7 +537,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelBairroComercial">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Bairrro:"/>
+        <Property name="text" type="java.lang.String" value="Bairro:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelCidadeComercial">
