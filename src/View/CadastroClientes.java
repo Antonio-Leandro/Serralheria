@@ -711,7 +711,7 @@ public class CadastroClientes extends javax.swing.JFrame {
 
     private void jButtonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSairActionPerformed
         TelaPrincipal tela = new TelaPrincipal();
-        //tela.setVisible(true);
+        tela.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButtonSairActionPerformed
   
