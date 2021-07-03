@@ -13,7 +13,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        LblFundoTelaPrincipal = new javax.swing.JLabel();
+        jLblAtivo = new javax.swing.JLabel();
         jMenuBarPrincipal = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -25,13 +25,24 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Principal");
+        setResizable(false);
+        getContentPane().setLayout(null);
+        getContentPane().add(jLblAtivo);
+        jLblAtivo.setBounds(620, 600, 140, 0);
 
-        LblFundoTelaPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Imagem 2.jpg"))); // NOI18N
+        jMenuBarPrincipal.setBackground(java.awt.SystemColor.inactiveCaption);
+        jMenuBarPrincipal.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jMenuBarPrincipal.setForeground(new java.awt.Color(153, 153, 153));
 
-        jMenu1.setText("Financeiro");
+        jMenu1.setBackground(new java.awt.Color(153, 153, 153));
+        jMenu1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Financeiro_1.png"))); // NOI18N
+        jMenu1.setToolTipText("Financeiro");
         jMenuBarPrincipal.add(jMenu1);
 
-        jMenu2.setText("Cadastros");
+        jMenu2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Cadastros_1.png"))); // NOI18N
+        jMenu2.setToolTipText("Cadastros");
 
         MenuItemCadastroDeClientes.setText("Cadastro de Clientes");
         MenuItemCadastroDeClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -67,25 +78,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBarPrincipal.add(jMenu2);
 
-        MenuOrcamentos.setText("Orçamentos");
+        MenuOrcamentos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        MenuOrcamentos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Orcamento.png"))); // NOI18N
+        MenuOrcamentos.setToolTipText("Orçamentos");
         jMenuBarPrincipal.add(MenuOrcamentos);
 
         setJMenuBar(jMenuBarPrincipal);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LblFundoTelaPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 798, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(LblFundoTelaPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 530, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        setSize(new java.awt.Dimension(814, 589));
+        setSize(new java.awt.Dimension(1161, 704));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -139,12 +139,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel LblFundoTelaPrincipal;
     private javax.swing.JMenuItem MenuItemCadastroDeClientes;
     private javax.swing.JMenuItem MenuItemCadastroDeFornecedores;
     private javax.swing.JMenuItem MenuItemCadastroDeFuncionarios;
     private javax.swing.JMenuItem MenuItemCadastroDeProdutos;
     private javax.swing.JMenu MenuOrcamentos;
+    private javax.swing.JLabel jLblAtivo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBarPrincipal;
