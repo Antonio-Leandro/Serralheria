@@ -39,7 +39,6 @@ public class CadastroClientes extends javax.swing.JFrame {
         jComboBoxTipoPessoa.setSelectedItem(null);
         jTextFieldNacionalidade.setText("");
         jTextFieldNaturalidade.setText("");
-        //jFormattedDataCadastro.setText("");
         jFormattedCEP.setText("");
         jTextFieldRua.setText("");
         jTextFieldNumero.setText("");
