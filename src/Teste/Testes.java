@@ -1,14 +1,15 @@
 package Teste;
 
 import Dao.PessoaDao;
-import Modelo.Pessoa;
+import Modelo.*;
 import java.sql.SQLException;
+import Factory.*;
 
 public class Testes {
 
 	public static void main(String[] args) throws SQLException {
 
-		Pessoa pessoa = new Pessoa();
+		/*Pessoa pessoa = new Pessoa();
 		pessoa.setCPF("510.427.083-07");
 		pessoa.setNOME("Antonio Saldanha");
 		pessoa.setRG("24.259.699-X");
@@ -52,7 +53,7 @@ public class Testes {
 		    }
 		} catch (SQLException ex) {
 			System.out.println("Não foi possível salvar o cadastro..." + ex.getMessage());
-		}
+		}*/
                 
                 /*try {
 		    if (pessoadao.busca(pessoa)) {
@@ -86,7 +87,10 @@ public class Testes {
 			System.out.println("Não foi possível atualizar o cadastro..." + ex.getMessage());
 		}*/
                 
-                pessoadao.listar();
+                //pessoadao.listar();
+                
+                ConnectionFactory connection = new ConnectionFactory();
+                connection.getConnection();
 	}
         
 }
