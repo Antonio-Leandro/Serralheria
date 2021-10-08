@@ -8,6 +8,7 @@ private String DATA_DE_NASCIMENTO;
 private String DATA_DE_CADASTRO;
 private String NACIONALIDADE;
 private String NATURALIDADE;
+private String UF_PESSOA;
 private String ESTADO_CIVIL;
 private String CEP;
 private String LOGRADOURO;
@@ -73,6 +74,14 @@ private String SENHA;
 
     public String getNACIONALIDADE() {
         return NACIONALIDADE;
+    }
+
+    public String getUF_PESSOA() {
+        return UF_PESSOA;
+    }
+
+    public void setUF_PESSOA(String UF_PESSOA) {
+        this.UF_PESSOA = UF_PESSOA;
     }
 
     public void setNACIONALIDADE(String NACIONALIDADE) {
