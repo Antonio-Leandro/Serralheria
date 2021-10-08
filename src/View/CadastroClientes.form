@@ -158,31 +158,7 @@
                                   <Component id="jTextFieldNaturalidade" min="-2" pref="93" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabelDataCadastro" min="-2" pref="99" max="-2" attributes="0"/>
-                                          <Component id="jFormattedDataCadastro" min="-2" pref="68" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="jLabelCEP" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="jFormattedCEP" min="-2" pref="61" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jTextFieldRua" min="-2" pref="168" max="-2" attributes="0"/>
-                                          <Component id="jLabelRua" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jFormattedCPF" min="-2" pref="90" max="-2" attributes="0"/>
@@ -207,6 +183,35 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabelTipoPessoa" min="-2" max="-2" attributes="0"/>
                                           <Component id="jComboBoxTipoPessoa" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabelUFPessoa" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxUFPessoa" alignment="0" min="-2" pref="48" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabelDataCadastro" min="-2" pref="99" max="-2" attributes="0"/>
+                                          <Component id="jFormattedDataCadastro" min="-2" pref="68" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="jLabelCEP" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="jFormattedCEP" min="-2" pref="61" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jTextFieldRua" min="-2" pref="168" max="-2" attributes="0"/>
+                                                  <Component id="jLabelRua" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
                                       </Group>
                                   </Group>
                               </Group>
@@ -237,81 +242,87 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelCPF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelRG" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelDataNasc" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelEstadoCivil" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelTipoPessoa" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jTextFieldNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jFormattedDataNasc" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jFormattedRG" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jFormattedCPF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jComboBoxEstadoCivil" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jComboBoxTipoPessoa" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelNome" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelCPF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelRG" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelDataNasc" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelEstadoCivil" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelTipoPessoa" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextFieldNome" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jFormattedDataNasc" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jFormattedRG" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jFormattedCPF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBoxEstadoCivil" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBoxTipoPessoa" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="jLabelNacionalidade" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextFieldNacionalidade" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabelNaturalidade" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabelDataCadastro" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jTextFieldNaturalidade" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jFormattedDataCadastro" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabelNacionalidade" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTextFieldNacionalidade" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelCEP" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelRua" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jLabelNaturalidade" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextFieldRua" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jFormattedCEP" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jTextFieldNaturalidade" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabelBairro" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabelComplemento" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabelNumero" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="jLabelCidade" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextFieldBairro" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldComplemento" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldNumero" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldCidade" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBoxUF" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabelDataCadastro" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jFormattedDataCadastro" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabelCEP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelRua" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jLabelUF" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jTextFieldRua" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jFormattedCEP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                          <Component id="jComboBoxUFPessoa" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jLabelUFPessoa" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelBairro" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelComplemento" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelNumero" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jLabelCidade" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jTextFieldBairro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldComplemento" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldNumero" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldCidade" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxUF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="jLabelUF" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelLogin" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelSenha" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -820,5 +831,52 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JLabel" name="jLabelUFPessoa">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="UF:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jComboBoxUFPessoa">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="28">
+            <StringItem index="0" value=" "/>
+            <StringItem index="1" value="RO"/>
+            <StringItem index="2" value="AC"/>
+            <StringItem index="3" value="AM"/>
+            <StringItem index="4" value="RR"/>
+            <StringItem index="5" value="PA"/>
+            <StringItem index="6" value="AP"/>
+            <StringItem index="7" value="TO"/>
+            <StringItem index="8" value="MA"/>
+            <StringItem index="9" value="PI"/>
+            <StringItem index="10" value="CE"/>
+            <StringItem index="11" value="RN"/>
+            <StringItem index="12" value="PB"/>
+            <StringItem index="13" value="PE"/>
+            <StringItem index="14" value="AL"/>
+            <StringItem index="15" value="SE"/>
+            <StringItem index="16" value="BA"/>
+            <StringItem index="17" value="MG"/>
+            <StringItem index="18" value="ES"/>
+            <StringItem index="19" value="RJ"/>
+            <StringItem index="20" value="SP"/>
+            <StringItem index="21" value="PR"/>
+            <StringItem index="22" value="SC"/>
+            <StringItem index="23" value="RS"/>
+            <StringItem index="24" value="MS"/>
+            <StringItem index="25" value="MT"/>
+            <StringItem index="26" value="GO"/>
+            <StringItem index="27" value="DF"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxUFPessoaActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
   </SubComponents>
 </Form>
