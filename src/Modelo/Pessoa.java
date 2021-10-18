@@ -2,6 +2,10 @@ package Modelo;
 
 public class Pessoa {
 private String CPF;
+private String CNPJ;
+private String RAZAO_SOCIAL;
+private String NOME_FANTASIA;
+private String DATA_FUNDACAO;
 private String NOME;
 private String RG;
 private String DATA_DE_NASCIMENTO;
@@ -20,6 +24,8 @@ private String ESTADO;
 private String TELEFONE_FIXO;
 private String CELULAR;
 private String EMAIL;
+private String SITE;
+private String EMAIL_RESP;
 private String EMPRESA;
 private String CARGO;
 private String END_COMERCIAL;
@@ -270,6 +276,54 @@ private String SENHA;
 
     public void setSENHA(String SENHA) {
         this.SENHA = SENHA;
+    }
+
+    public String getCNPJ() {
+        return CNPJ;
+    }
+
+    public void setCNPJ(String CNPJ) {
+        this.CNPJ = CNPJ;
+    }
+
+    public String getRAZAO_SOCIAL() {
+        return RAZAO_SOCIAL;
+    }
+
+    public void setRAZAO_SOCIAL(String RAZAO_SOCIAL) {
+        this.RAZAO_SOCIAL = RAZAO_SOCIAL;
+    }
+
+    public String getNOME_FANTASIA() {
+        return NOME_FANTASIA;
+    }
+
+    public void setNOME_FANTASIA(String NOME_FANTASIA) {
+        this.NOME_FANTASIA = NOME_FANTASIA;
+    }
+
+    public String getDATA_FUNDACAO() {
+        return DATA_FUNDACAO;
+    }
+
+    public void setDATA_FUNDACAO(String DATA_FUNDACAO) {
+        this.DATA_FUNDACAO = DATA_FUNDACAO;
+    }
+
+    public String getSITE() {
+        return SITE;
+    }
+
+    public void setSITE(String SITE) {
+        this.SITE = SITE;
+    }
+
+    public String getEMAIL_RESP() {
+        return EMAIL_RESP;
+    }
+
+    public void setEMAIL_RESP(String EMAIL_RESP) {
+        this.EMAIL_RESP = EMAIL_RESP;
     }
     
 }
