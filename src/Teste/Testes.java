@@ -1,10 +1,8 @@
 package Teste;
 
-import Dao.FornecedorDao;
 import Dao.PessoaDao;
 import Modelo.*;
 import java.sql.SQLException;
-import Factory.*;
 
 public class Testes {
 
@@ -44,7 +42,7 @@ public class Testes {
                 pessoa.setLOGIN("");
                 pessoa.setSENHA("");
 
-		/*PessoaDao pessoadao = new PessoaDao();
+		PessoaDao pessoadao = new PessoaDao();
 		try {
 		    if (pessoadao.busca(pessoa)) {
 		        System.out.println("Já existe um cadastro para este CPF!");
@@ -54,7 +52,7 @@ public class Testes {
 		    }
 		} catch (SQLException ex) {
 			System.out.println("Não foi possível salvar o cadastro..." + ex.getMessage());
-		}*/
+		}
                 
                 /*try {
 		    if (pessoadao.busca(pessoa)) {
@@ -90,15 +88,13 @@ public class Testes {
                 
                 //pessoadao.listar();
                 
-                /*ConnectionFactory connection = new ConnectionFactory();
-                connection.getConnection();*/
                 
-                FornecedorDao fornecedordao = new FornecedorDao();
+                
+                /*FornecedorDao fornecedordao = new FornecedorDao();
                 if(fornecedordao.busca(pessoa)) {
                    System.out.println("Já existe um cadastro para este CPF!");
                 } else {
                     System.out.println("Registro não encontrado!");
-                }   
-                
+                }*/          
 	}        
 }
