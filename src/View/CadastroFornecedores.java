@@ -101,7 +101,7 @@ public class CadastroFornecedores extends javax.swing.JFrame {
         jLabelNomeFantasia = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Cadastro de Clientes");
+        setTitle("Cadastro de Fornecedores");
         setResizable(false);
 
         jLabelRasaoSocial.setText("Rasão Social:");
