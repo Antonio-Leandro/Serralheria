@@ -37,6 +37,9 @@ private String ESTADO_END_COM;
 private String TIPO_PESSOA;
 private String LOGIN;
 private String SENHA;
+private String GENERO;
+
+
 
     public String getCPF() {
         return CPF;
@@ -324,6 +327,14 @@ private String SENHA;
 
     public void setEMAIL_RESP(String EMAIL_RESP) {
         this.EMAIL_RESP = EMAIL_RESP;
+    }
+    
+    public String getGENERO() {
+        return GENERO;
+    }
+
+    public void setGENERO(String GENERO) {
+        this.GENERO = GENERO;
     }
     
 }
