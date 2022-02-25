@@ -1,5 +1,9 @@
 package View;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 public class TelaPrincipal extends javax.swing.JFrame {
 
@@ -106,9 +110,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_MenuItemCadastroDeFornecedoresActionPerformed
 
     private void MenuItemCadastroDeProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeProdutosActionPerformed
-        CadastroProdutos cadastroprodutos = new CadastroProdutos();
-        cadastroprodutos.setVisible(true);
-        //this.dispose();
+        CadastroProdutos cadastroprodutos;
+        try {
+            cadastroprodutos = new CadastroProdutos();
+            cadastroprodutos.setVisible(true);
+            this.dispose();
+        } catch (SQLException ex) {
+            System.out.println("Não foi possível carregar o formulário! " + ex.getMessage());
+        }
     }//GEN-LAST:event_MenuItemCadastroDeProdutosActionPerformed
 
     private void MenuItemCadastroDeFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeFuncionariosActionPerformed
