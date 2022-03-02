@@ -121,9 +121,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_MenuItemCadastroDeProdutosActionPerformed
 
     private void MenuItemCadastroDeFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastroDeFuncionariosActionPerformed
-        CadastroFuncionarios cadastrofuncionarios = new CadastroFuncionarios();
+        CadastroFuncionarios cadastrofuncionarios = null;
+        try {
+            cadastrofuncionarios = new CadastroFuncionarios();
+        } catch (SQLException ex) {
+            System.out.println("Não foi possível Carregar o Formulário de Cadastro de Funcionários! " + ex.getMessage());
+        }
         cadastrofuncionarios.setVisible(true);
-        //this.dispose();
+        this.dispose();
     }//GEN-LAST:event_MenuItemCadastroDeFuncionariosActionPerformed
 
  
