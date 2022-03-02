@@ -1,6 +1,7 @@
 package Modelo;
 
 public class Pessoa {
+private String ID;
 private String CPF;
 private String CNPJ;
 private String RAZAO_SOCIAL;
@@ -39,7 +40,13 @@ private String LOGIN;
 private String SENHA;
 private String GENERO;
 
-
+    public String getID() {
+        return ID;
+    }
+    
+    public void setID(String ID) {
+        this.ID = ID;
+    }
 
     public String getCPF() {
         return CPF;
