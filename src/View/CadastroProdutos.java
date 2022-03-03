@@ -25,9 +25,9 @@ public class CadastroProdutos extends javax.swing.JFrame {
             modelo.addRow(new Object[]{
                 p.getID_PRODUTO(),
                 p.getID_FORNECEDOR(),
-                p.getFORNECEDOR(),
                 p.getNOME_PRODUTO(),
                 p.getVALOR_UNI(),
+                p.getFORNECEDOR(),
                 p.getFABRICANTE()
             });
         }
