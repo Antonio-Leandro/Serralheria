@@ -95,7 +95,7 @@ public class FuncionarioDao {
             
             pessoa.setID(rs.getString("ID_FUNCIONARIO"));
             pessoa.setCPF(rs.getString("CPF"));
-            pessoa.setNUMERO(rs.getString("NOME"));
+            pessoa.setNOME(rs.getString("NOME"));
             pessoa.setRG(rs.getString("RG"));
             pessoa.setDATA_DE_NASCIMENTO(rs.getString("DATA_NASC"));
             pessoa.setDATA_DE_CADASTRO(rs.getString("DATA_DE_CADASTRO"));
