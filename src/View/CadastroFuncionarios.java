@@ -115,6 +115,11 @@ public class CadastroFuncionarios extends javax.swing.JFrame {
 
         jButtonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Sair.jpg"))); // NOI18N
         jButtonSair.setToolTipText("Sair");
+        jButtonSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSairActionPerformed(evt);
+            }
+        });
 
         jLabelNumero.setText("Número:");
 
@@ -467,6 +472,8 @@ public class CadastroFuncionarios extends javax.swing.JFrame {
                 jTextFieldEmail.setText("");
                 jTextFieldLogin.setText("");
                 jPasswordSenha.setText("");
+                
+                this.LimpaCampos();
             } else {
                 System.out.println("Não há registro com esta descrição na base! ");
             }
@@ -508,15 +515,15 @@ public class CadastroFuncionarios extends javax.swing.JFrame {
         PessoaDao pessoadao = new PessoaDao();
         try {
             pessoadao.atualiza(pessoa);
+            this.LimpaCampos();
         } catch (SQLException ex) {
             System.out.println("Não foi possível atualizar o registro no grid! " + ex.getMessage());
         }
-        
-            try {
-                PreencherTabela();
-            } catch (SQLException ex) {
-                System.out.println("Não foi possível carregar o registro no grid! " + ex.getMessage());
-            }
+        try {
+            PreencherTabela();
+        } catch (SQLException ex) {
+            System.out.println("Não foi possível carregar o registro no grid! " + ex.getMessage());
+        }
     }//GEN-LAST:event_jButtonEditarActionPerformed
 
     private void jButtonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalvarActionPerformed
@@ -552,17 +559,23 @@ public class CadastroFuncionarios extends javax.swing.JFrame {
             } else {
                 funcionariodao.adiciona(pessoa);
                 JOptionPane.showMessageDialog(null, "Cadastro salvo com sucesso! ");
+                this.LimpaCampos();
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao salvar o registro! " + ex.getMessage());
         }
-        
-            try {
-                PreencherTabela();
-            } catch (SQLException ex) {
-                System.out.println("Não foi possível carregar o registro no grid! " + ex.getMessage());
-            }
+        try {
+            PreencherTabela();
+        } catch (SQLException ex) {
+            System.out.println("Não foi possível carregar o registro no grid! " + ex.getMessage());
+        }
     }//GEN-LAST:event_jButtonSalvarActionPerformed
+
+    private void jButtonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSairActionPerformed
+        TelaPrincipal telaprincipal = new TelaPrincipal();
+        telaprincipal.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButtonSairActionPerformed
 
 
     public static void main(String args[]) {
